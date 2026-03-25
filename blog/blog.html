@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ========== Meta Basics ========== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — BastionTech (Oviedo Web Design & Local SEO)</title>
+  <meta name="description"
+    content="Guides for Oviedo & Central Florida small businesses on web design, local SEO, and marketing strategy. Read our latest articles." />
+  <meta name="author" content="BastionTech" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="https://bastiontech.org/blog/blog.html" />
+  <meta name="theme-color" content="#0b0f14" />
+
+  <!-- ========== Open Graph / Twitter ========== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BastionTech" />
+  <meta property="og:title" content="BastionTech Blog — Web Design & Local SEO in Oviedo" />
+  <meta property="og:description"
+    content="Practical guides for Oviedo & Central Florida small businesses on websites, SEO, and marketing." />
+  <meta property="og:url" content="https://bastiontech.org/blog/blog.html" />
+  <meta property="og:image" content="https://bastiontech.org/bastionbanner.png" />
+  <meta property="og:image:alt" content="BastionTech — Web Design & SEO in Oviedo, FL" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BastionTech Blog — Web Design & Local SEO in Oviedo" />
+  <meta name="twitter:description"
+    content="Practical guides for Oviedo & Central Florida small businesses on websites, SEO, and marketing." />
+  <meta name="twitter:image" content="https://bastiontech.org/bastionbanner.png" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" crossorigin="anonymous" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#48668b',
+            sand: '#cfab6e',
+            coal: '#0b0f14',
+            ink: '#0f172a',
+          },
+          boxShadow: { glow: '0 10px 30px rgba(72,102,139,.3)' },
+          fontFamily: {
+            display: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- JSON-LD: CollectionPage + ItemList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "BastionTech Blog",
+    "description": "Guides for Oviedo & Central Florida small businesses on web design, local SEO, and marketing strategy.",
+    "url": "https://bastiontech.org/blog/blog.html",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://bastiontech.org/blog/local-seo-case-study-oviedo-the-cove-chiropractic.html",
+          "name": "Local SEO Case Study Oviedo FL: The Missing Step That Boosted Authority"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://bastiontech.org/blog/oviedo-marketing-strategy-by-business-type.html",
+          "name": "Which Marketing Strategy Works Best for Your Oviedo Business?"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://bastiontech.org/blog/choosing-a-digital-marketing-agency-oviedo.html",
+          "name": "Top 10 Things to Consider When Choosing a Digital Marketing Agency (Oviedo, FL)"
+        }
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BastionTech",
+      "url": "https://bastiontech.org/",
+      "logo": { "@type": "ImageObject", "url": "https://bastiontech.org/img/BastionLogo.png" }
+    }
+  }
+  </script>
+
+  <!-- Dark background & reveal -->
+  <style>
+    :root {
+      --scroll: 0;
+    }
+
+    .parallax {
+      perspective: 1px;
+      transform-style: preserve-3d;
+      overflow-x: hidden;
+    }
+
+    .parallax-layer {
+      position: fixed;
+      inset: 0;
+      z-index: -10;
+      pointer-events: none;
+      transition: opacity .4s ease;
+      will-change: transform;
+    }
+
+    .parallax-layer[data-speed] {
+      transform: translate3d(0, calc(var(--scroll) * var(--speed, .1)), 0);
+    }
+
+    .blob {
+      filter: blur(40px) saturate(120%);
+      opacity: .35;
+      mix-blend-mode: screen;
+    }
+
+    .grid-fade {
+      background-image: linear-gradient(rgba(255, 255, 255, .07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .07) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(circle at 50% 30%, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 70%);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all .6s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: none;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      line-height: 1.75rem;
+      color: rgba(255, 255, 255, .8);
+    }
+  </style>
+</head>
+
+<body class="bg-ink text-white antialiased selection:bg-primary/30 selection:text-white">
+
+  <!-- Parallax background -->
+  <div class="parallax">
+    <div class="parallax-layer" data-speed="-0.06"
+      style="--speed:-0.06; background: radial-gradient(60% 60% at 20% 10%, rgba(72,102,139,.45), rgba(11,15,20,0) 60%)">
+    </div>
+    <div class="parallax-layer grid-fade" data-speed="-0.03" style="--speed:-0.03"></div>
+    <div class="parallax-layer blob" data-speed="-0.09"
+      style="--speed:-0.09; background: radial-gradient(35rem 35rem at 80% 20%, rgba(207,171,110,.55), rgba(11,15,20,0) 60%)">
+    </div>
+    <div class="parallax-layer blob" data-speed="-0.12"
+      style="--speed:-0.12; background: radial-gradient(28rem 28rem at 10% 70%, rgba(72,102,139,.55), rgba(11,15,20,0) 60%)">
+    </div>
+  </div>
+
+  <!-- ===== Header (dark) ===== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-ink/95 text-white border-b border-white/10 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="/" class="inline-flex items-center gap-2">
+        <img src="/img/BastionLogo.png" alt="BastionTech" class="h-9 w-auto" />
+        <span class="sr-only">BastionTech</span>
+      </a>
+
+      <nav class="hidden sm:flex items-center gap-8 text-sm">
+        <div class="relative">
+          <button type="button" class="inline-flex items-center gap-1 hover:text-sand" aria-haspopup="true"
+            aria-expanded="false" aria-controls="menu-services" data-dropdown-btn="services">
+            Services
+            <svg class="h-4 w-4 mt-px" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 111.02 1.1l-4.23 3.825a.75.75 0 01-1.02 0L5.25 8.33a.75.75 0 01-.02-1.12z" />
+            </svg>
+          </button>
+          <div id="menu-services" role="menu" aria-label="Services" class="absolute left-0 mt-2 w-56 rounded-xl border border-white/10 bg-ink shadow-lg p-2
+                      hidden opacity-0 translate-y-1 transition ease-out duration-150" data-dropdown-panel="services"
+            tabindex="-1">
+            <a href="/#packages-web" class="block px-3 py-2 rounded-lg hover:bg-white/10" role="menuitem">Web Design</a>
+            <a href="/#packages-seo" class="block px-3 py-2 rounded-lg hover:bg-white/10" role="menuitem">Local SEO</a>
+            <a href="/#site-care" class="block px-3 py-2 rounded-lg hover:bg-white/10" role="menuitem">Hosting &
+              Maintenance</a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <button type="button" class="inline-flex items-center gap-1 hover:text-sand" aria-haspopup="true"
+            aria-expanded="false" aria-controls="menu-resources" data-dropdown-btn="resources">
+            Resources
+            <svg class="h-4 w-4 mt-px" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 111.02 1.1l-4.23 3.825a.75.75 0 01-1.02 0L5.25 8.33a.75.75 0 01-.02-1.12z" />
+            </svg>
+          </button>
+          <div id="menu-resources" role="menu" aria-label="Resources" class="absolute left-0 mt-2 w-56 rounded-xl border border-white/10 bg-ink shadow-lg p-2
+                      hidden opacity-0 translate-y-1 transition ease-out duration-150" data-dropdown-panel="resources"
+            tabindex="-1">
+            <a href="/#work" class="block px-3 py-2 rounded-lg hover:bg-white/10">Case Studies</a>
+            <a href="/blog/blog.html" class="block px-3 py-2 rounded-lg hover:bg-white/10" role="menuitem">Blog</a>
+            <a href="/#faq" class="block px-3 py-2 rounded-lg hover:bg-white/10" role="menuitem">FAQ</a>
+            <a href="/#contact" class="block px-3 py-2 rounded-lg hover:bg-white/10" role="menuitem">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      <a href="/#contact"
+        class="hidden sm:inline-flex items-center gap-2 text-sm px-3 py-2 rounded-xl bg-primary hover:bg-primary/90 shadow-glow">
+        Get a Quote
+      </a>
+
+      <div class="sm:hidden flex items-center gap-2">
+        <button id="menuBtn"
+          class="inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white/20 hover:bg-white/10"
+          aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="iconOpen" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="iconClose" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="sm:hidden hidden border-t border-white/10 bg-ink">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <ul class="space-y-2 text-sm">
+          <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/#work">Case Studies</a></li>
+
+          <li class="border-t border-white/10 pt-2">
+            <button class="w-full flex items-center justify-between px-2 py-2 rounded hover:bg-white/10"
+              aria-expanded="false" data-disclosure="services">
+              <span>Services</span>
+              <svg class="h-4 w-4 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 111.02 1.1l-4.23 3.825a.75.75 0 01-1.02 0L5.25 8.33a.75.75 0 01-.02-1.12z" />
+              </svg>
+            </button>
+            <ul class="mt-1 ml-2 hidden" data-disclosure-panel="services">
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/#packages-web">Web Design</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/#packages-seo">Local SEO</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/#site-care">Hosting & Maintenance</a></li>
+            </ul>
+          </li>
+
+          <li class="border-t border-white/10 pt-2">
+            <button class="w-full flex items-center justify-between px-2 py-2 rounded hover:bg-white/10"
+              aria-expanded="false" data-disclosure="resources">
+              <span>Resources</span>
+              <svg class="h-4 w-4 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 111.02 1.1l-4.23 3.825a.75.75 0 01-1.02 0L5.25 8.33a.75.75 0 01-.02-1.12z" />
+              </svg>
+            </button>
+            <ul class="mt-1 ml-2 hidden" data-disclosure-panel="resources">
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/blog/blog.html">Blog</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/#faq">FAQ</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/#contact">Contact</a></li>
+            </ul>
+          </li>
+
+          <li class="border-t border-white/10 pt-2">
+            <a class="block px-2 py-2 rounded hover:bg-white/10" href="/#contact">Contact</a>
+          </li>
+        </ul>
+
+        <div class="mt-3">
+          <a href="/#contact"
+            class="block text-center w-full rounded-xl bg-primary hover:bg-primary/90 px-4 py-3 font-semibold">
+            Get a Quote
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Spacer to offset fixed header -->
+  <div class="h-16"></div>
+
+  <!-- Page header -->
+  <section class="pt-12 pb-6">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="reveal text-3xl sm:text-4xl font-extrabold tracking-tight">BastionTech Blog</h1>
+      <p class="reveal mt-3 lead">Practical guides on <strong>web design</strong>, <strong>local SEO</strong>, and
+        <strong>marketing strategy</strong> for Oviedo and Central Florida small businesses.
+      </p>
+    </div>
+  </section>
+
+  <!-- Posts grid -->
+  <main class="pb-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 gap-6">
+
+        <!-- Google Results About You: Cut Personal Data Leaks in Search -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/google-results-about-you-cut-personal-data-leaks-in-search.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="Google Results About You: Cut Personal Data Leaks in Search"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/google-results-about-you-cut-personal-data-leaks-in-search.html" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">
+                Google Results About You: Cut Personal Data Leaks in Search
+              </h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Learn how to use Google’s built in Results About You tool to find and remove your phone number, home
+              address,
+              or personal email from Google Search. Includes setup steps, review tips, and a repeatable checklist for
+              Central
+              Florida families and small business owners.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Jan 7, 2026</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Privacy</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Security</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Google Search</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Why Every Small Business Needs an SEO Blog Content Strategy -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/why-every-small-business-needs-an-seo-blog-content-strategy.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="Why Every Small Business Needs an SEO Blog Content Strategy"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/why-every-small-business-needs-an-seo-blog-content-strategy.html" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">
+                Why Every Small Business Needs an SEO Blog Content Strategy
+              </h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Discover how consistent, helpful blog content improves local search rankings, builds trust,
+              and brings more high-quality leads for businesses in Oviedo and Central Florida.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Dec 1, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">SEO</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Content Strategy</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local Marketing</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cold Email vs Email Marketing: When to Use Each -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/cold-email-vs-email-marketing.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="Cold Email vs Email Marketing: When to Use Each"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/cold-email-vs-email-marketing.html" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">
+                Cold Email vs Email Marketing: When to Use Each
+              </h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Understand when outbound tools like ManyReach make sense versus nurture platforms like Mailchimp. See
+              industry
+              examples, realistic benchmarks, and Central Florida playbooks to choose the right channel.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Nov 6, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Email Marketing</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Cold Email</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Lead Nurturing</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- How Local SEO Services Help Oviedo Businesses Rank and Grow Online -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/how-local-seo-services-help-oviedo-businesses-rank-and-grow-online.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="How Local SEO Services Help Oviedo Businesses Rank and Grow Online"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/how-local-seo-services-help-oviedo-businesses-rank-and-grow-online.html"
+              class="hover:text-sand">
+              <h2 class="font-semibold text-lg">
+                How Local SEO Services Help Oviedo Businesses Rank and Grow Online
+              </h2>
+            </a>
+            <p class="text-sm text-white/70">
+              How local SEO improves visibility for Oviedo and Central Florida businesses through Google Business
+              optimization,
+              clean citations, steady reviews, and helpful content that drives Map Pack results.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Oct 30, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local SEO</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Google Business Profile</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Oviedo FL</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- How to Check Your Website for SEO Optimization -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/how-to-check-your-website-for-seo-optimization-step-by-step-for-small-businesses.html"
+            class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png"
+                alt="How to Check Your Website for SEO Optimization (Step-by-Step for Small Businesses)"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/how-to-check-your-website-for-seo-optimization-step-by-step-for-small-businesses.html"
+              class="hover:text-sand">
+              <h2 class="font-semibold text-lg">
+                How to Check Your Website for SEO Optimization (Step-by-Step for Small Businesses)
+              </h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Learn how to check your website for SEO optimization with a simple, step-by-step process.
+              Identify issues that hold back your rankings and see which tools help you SEO your website effectively.
+              Ideal for small business owners looking to improve visibility and performance.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Oct 21, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">SEO</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Optimization</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Website Audit</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Why Backlinks Matter for Local SEO -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/why-backlinks-matter-for-local-seo-and-how-one-maitland-chiropractor-benefits-from-them.html"
+            class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png"
+                alt="Why Backlinks Matter for Local SEO (and How One Maitland Chiropractor Benefits from Them)"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/why-backlinks-matter-for-local-seo-and-how-one-maitland-chiropractor-benefits-from-them.html"
+              class="hover:text-sand">
+              <h2 class="font-semibold text-lg">Why Backlinks Matter for Local SEO (and How One Maitland Chiropractor
+                Benefits
+                from Them)</h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Learn why backlinks for local SEO matter, how quality links boost visibility, and see a simple example
+              featuring a
+              Maitland chiropractor.
+              Get featured for a clean, relevant backlink.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Oct 16, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Backlinks</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local SEO</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Maitland</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- What Is SEO and How Does It Work? -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/what-is-seo.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="What Is SEO and How Does It Work? Oviedo Small Business Guide"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/what-is-seo.html" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">What Is SEO and How Does It Work? Oviedo Small Business Guide</h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Learn what SEO means and how it works for local businesses in Oviedo. This guide explains the basics,
+              ranking
+              factors, and a simple 90-day plan to get found on Google.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Oct 15, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">SEO Basics</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local SEO</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Why Page Speed Matters for SEO -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/page-speed-seo.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="Why Page Speed Matters for SEO (and How to Fix It)"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/page-speed-seo.html" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">Why Page Speed Matters for SEO (and How to Fix It)</h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Discover why page speed SEO is vital for rankings and user experience. Learn how Oviedo businesses can
+              test their
+              site using PageSpeed Insights and optimize images with Squoosh for faster load times and better
+              visibility.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Oct 9, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Page Speed</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">SEO</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Build Domain Authority with Business Directories -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/build-domain-authority-with-business-directories.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="Build Domain Authority with Business Directories in Oviedo"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/build-domain-authority-with-business-directories.html" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">Build Domain Authority with Business Directories in Oviedo</h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Learn how small businesses in Oviedo and Central Florida can grow their domain authority through backlinks
+              by
+              adding their business to trusted online directories. Includes 15 free local and national directory links
+              plus a
+              simple local SEO plan.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Oct 8, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local SEO</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Backlinks</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- BastionTech GPT Builder Promo Card -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/bastiontech-gpt-builder.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="AI Content Tools for Small Businesses: Build Your Own GPT in Minutes"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/bastiontech-gpt-builder.html" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">AI Content Tools for Small Businesses: Build Your Own GPT in Minutes
+              </h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Discover how small businesses in Oviedo and Central Florida can use the BastionTech GPT Builder to create
+              their
+              own
+              Local SEO article bot. Learn setup steps, features, and how to publish consistent, brand-safe content each
+              week
+              without needing a writer.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Oct 7, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">AI Tools</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local SEO</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Add Manager to Google Business Profile -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/how-to-add-a-manager-to-your-google-business-profile" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="How to Add a Manager to Your Google Business Profile"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/how-to-add-a-manager-to-your-google-business-profile" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">How to Add a Manager to Your Google Business Profile</h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Learn how to quickly add BastionTech (noeljbass@gmail.com) as a Manager to your Google Business Profile so
+              we can
+              update hours, posts, photos, and reviews—helping your local SEO and saving you time.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Oct 7, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">How-To</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local SEO</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Responsive Design: The Core of Effective Small Business Web Design -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/responsive-design-the-core-of-effective-small-business-web-design" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="Responsive Design: The Core of Effective Small Business Web Design"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/responsive-design-the-core-of-effective-small-business-web-design" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">Responsive Design: The Core of Effective Small Business Web Design</h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Discover how responsive design improves usability, SEO, and lead generation for small business websites in
+              Oviedo, Winter Springs, and Seminole County. Includes mobile UX and speed tips.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Oct 6, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Guide</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Web Design</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!--Local SEO for Small Businesses: Google Business Profile & Reviews-->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/local-seo-for-small-businesses-google-business-profile-reviews.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="Local SEO for Small Businesses: Google Business Profile & Reviews"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/local-seo-for-small-businesses-google-business-profile-reviews.html" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">Local SEO for Small Businesses: Google Business Profile & Reviews</h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Learn how to optimize your Google Business Profile and earn more reviews to boost visibility in Oviedo,
+              Winter Springs, and Seminole County. Includes free review link tips from sendmestars.com.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Oct 5, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Guide</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local SEO</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!--Build a Local SEO Content Calendar for Oviedo Businesses-->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/build-a-local-seo-content-calendar-for-oviedo-businesses.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="Build a Local SEO Content Calendar for Oviedo Businesses"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/build-a-local-seo-content-calendar-for-oviedo-businesses.html" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">Build a Local SEO Content Calendar for Oviedo Businesses</h2>
+            </a>
+            <p class="text-sm text-white/70">
+              A practical month-by-month plan to publish local content that earns calls and map actions in Oviedo,
+              Winter Springs, and Seminole County.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Oct 5, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Guide</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local SEO</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post NEW: Local SEO Case Study -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/local-seo-case-study-oviedo-the-cove-chiropractic.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png"
+                alt="Local SEO Case Study Oviedo FL: The Missing Step That Boosted Authority"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/local-seo-case-study-oviedo-the-cove-chiropractic.html" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">Local SEO Case Study Oviedo FL: The Missing Step That Boosted Authority
+              </h2>
+            </a>
+            <p class="text-sm text-white/70">
+              How tightening GBP, schema, and social linking for The Cove Chiropractic removed “leaks,” strengthened
+              signals, and set the stage for steady ranking gains.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Oct 2, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Case Study</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local SEO</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post 1 -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/oviedo-marketing-strategy-by-business-type.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png" alt="Which Marketing Strategy Works Best for Your Oviedo Business?"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/oviedo-marketing-strategy-by-business-type.html" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">Which Marketing Strategy Works Best for Your Oviedo Business?</h2>
+            </a>
+            <p class="text-sm text-white/70">
+              Match your business model to the channels that actually drive results in Oviedo—Google Maps for
+              emergencies, SEO for services, ads + email for ecommerce, content for B2B, and more.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Sept 22, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Strategy</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local SEO</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <a href="/blog/choosing-a-digital-marketing-agency-oviedo.html" class="block">
+            <div class="aspect-[16/9] bg-gradient-to-tr from-white/10 to-transparent relative overflow-hidden">
+              <img src="/bastionbanner.png"
+                alt="Top 10 Things to Consider When Choosing a Digital Marketing Agency (Oviedo, FL)"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy" />
+            </div>
+          </a>
+          <div class="p-6 flex flex-col gap-3">
+            <a href="/blog/choosing-a-digital-marketing-agency-oviedo.html" class="hover:text-sand">
+              <h2 class="font-semibold text-lg">Top 10 Things to Consider When Choosing a Digital Marketing Agency
+                (Oviedo, FL)</h2>
+            </a>
+            <p class="text-sm text-white/70">
+              A small-business checklist: experience, services, pricing, communication, tech stack, SEO chops, local
+              knowledge, and long-term partnership fit.
+            </p>
+            <div class="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Sept 22, 2025</span>
+              <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Hiring</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Marketing</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Subscribe banner (dark variant) -->
+      <section class="reveal mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h3 class="text-xl font-extrabold tracking-tight">Get new posts in your inbox</h3>
+        <p class="mt-2 text-white/70">Monthly tips on SEO, websites, and growth for Christian & family businesses in
+          Oviedo and Central Florida.</p>
+        <form class="mt-4 flex flex-col sm:flex-row gap-3"
+          action="https://bastiontech.us22.list-manage.com/subscribe/post?u=5635c09a3332ef2cdd2c0b697&amp;id=4a1ef11af2&amp;f_id=0048dbe1f0"
+          method="post" target="_blank" novalidate>
+          <label class="sr-only" for="mce-EMAIL">Email</label>
+          <input id="mce-EMAIL" name="EMAIL" type="email" required placeholder="you@example.com"
+            class="min-w-[260px] sm:min-w-[320px] rounded-xl bg-white text-ink border border-white/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50" />
+          <button type="submit" class="rounded-xl bg-primary hover:bg-primary/90 px-5 py-3 font-semibold shadow-glow">
+            Subscribe
+          </button>
+          <!-- Honeypot -->
+          <div aria-hidden="true" style="position:absolute; left:-5000px;">
+            <input type="text" name="b_5635c09a3332ef2cdd2c0b697_4a1ef11af2" tabindex="-1" value="">
+          </div>
+        </form>
+        <p class="mt-2 text-xs text-white/50">By subscribing, you agree to a quick email follow-up and occasional free
+          service updates. Unsubscribe anytime.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-10 text-sm text-white/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="y"></span> BastionTech. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="tel:+14077962684" class="hover:text-white font-semibold">📞 (407) 796-2684</a>
+        <a href="/bastionprivacy.html" class="hover:text-white">Privacy</a>
+        <a href="/termsandconditions.html" class="hover:text-white">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Parallax + reveal -->
+  <script>
+    const layers = document.querySelectorAll('.parallax-layer');
+    const reveals = document.querySelectorAll('.reveal');
+    const onScroll = () => {
+      const s = window.scrollY;
+      document.documentElement.style.setProperty('--scroll', s + 'px');
+      layers.forEach(el => {
+        const speed = parseFloat(el.dataset.speed || 0);
+        el.style.transform = `translate3d(0, ${s * speed}px, 0)`;
+      });
+      reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 60) el.classList.add('show');
+      });
+    };
+    document.addEventListener('scroll', () => requestAnimationFrame(onScroll), { passive: true });
+    window.addEventListener('load', () => { onScroll(); document.getElementById('y').textContent = new Date().getFullYear(); });
+  </script>
+
+  <!-- Header interactions -->
+  <script>
+    (function () {
+      if (window.__navBound) return; window.__navBound = true;
+
+      const btn = document.getElementById('menuBtn');
+      const panel = document.getElementById('mobileMenu');
+      const iconOpen = document.getElementById('iconOpen');
+      const iconClose = document.getElementById('iconClose');
+
+      const closeMenu = () => {
+        if (!panel) return;
+        panel.classList ? panel.classList.add('hidden') : null;
+        if (iconOpen) iconOpen.classList.remove('hidden');
+        if (iconClose) iconClose.classList.add('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      };
+      const openMenu = () => {
+        if (!panel) return;
+        panel.classList.remove('hidden');
+        if (iconOpen) iconOpen.classList.add('hidden');
+        if (iconClose) iconClose.classList.remove('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      };
+
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+          isOpen ? closeMenu() : openMenu();
+        });
+      }
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+      if (panel) panel.addEventListener('click', (e) => { if (e.target.tagName === 'A') closeMenu(); });
+
+      // Desktop dropdowns (click-to-open)
+      const btnSel = '[data-dropdown-btn]';
+      const panelSel = '[data-dropdown-panel]';
+      const buttons = Array.from(document.querySelectorAll(btnSel));
+      const panels = Array.from(document.querySelectorAll(panelSel));
+
+      function closeAllDropdowns() {
+        buttons.forEach(b => b.setAttribute('aria-expanded', 'false'));
+        panels.forEach(p => {
+          p.classList.add('hidden', 'opacity-0', 'translate-y-1');
+          p.classList.remove('opacity-100', 'translate-y-0');
+        });
+      }
+
+      function openDropdown(key) {
+        const b = document.querySelector(`[data-dropdown-btn="${key}"]`);
+        const p = document.querySelector(`[data-dropdown-panel="${key}"]`);
+        if (!b || !p) return;
+        b.setAttribute('aria-expanded', 'true');
+        p.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          p.classList.remove('opacity-0', 'translate-y-1');
+          p.classList.add('opacity-100', 'translate-y-0');
+        });
+        const firstFocusable = p.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+        if (firstFocusable) firstFocusable.focus({ preventScroll: true });
+      }
+
+      buttons.forEach(b => {
+        b.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const key = b.getAttribute('data-dropdown-btn');
+          const expanded = b.getAttribute('aria-expanded') === 'true';
+          closeAllDropdowns();
+          if (!expanded) openDropdown(key);
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest(panelSel) && !e.target.closest(btnSel)) closeAllDropdowns();
+      });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAllDropdowns(); });
+      panels.forEach(p => p.addEventListener('click', (e) => { if (e.target.tagName === 'A') closeAllDropdowns(); }));
+    })();
+  </script>
+</body>
+
+</html>

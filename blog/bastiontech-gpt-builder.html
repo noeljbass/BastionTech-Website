@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ========== Meta Basics ========== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Content Tools for Small Businesses: Build Your Own GPT in Minutes</title>
+  <meta name="description"
+    content="AI content tools for small businesses that help you launch a custom Local SEO article GPT. Learn setup, features, and how to publish consistent content." />
+  <meta name="author" content="BastionTech" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="https://bastiontech.org/blog/bastiontech-gpt-builder.html" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- ========== Open Graph / Twitter ========== -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="BastionTech" />
+  <meta property="og:title" content="AI Content Tools for Small Businesses: Build Your Own GPT in Minutes" />
+  <meta property="og:description"
+    content="AI content tools for small businesses that help you launch a custom Local SEO article GPT. Learn setup, features, and how to publish consistent content." />
+  <meta property="og:url" content="https://bastiontech.org/blog/bastiontech-gpt-builder.html" />
+  <meta property="og:image" content="https://bastiontech.org/bastionbanner.png" />
+  <meta property="og:image:alt" content="BastionTech — Web Design & SEO in Oviedo, FL" />
+  <meta property="article:published_time" content="2025-10-07T09:00:00-04:00" />
+  <meta property="article:section" content="Marketing" />
+
+  <!-- ARTICLE TAGS: duplicate the next line for each tag and replace {{article_tag}} -->
+  <meta property="article:tag" content="AI content tools" />
+  <meta property="article:tag" content="Small business marketing" />
+  <meta property="article:tag" content="Local SEO" />
+  <meta property="article:tag" content="Custom GPT" />
+  <meta property="article:tag" content="Oviedo Florida" />
+  <meta property="article:tag" content="Content strategy" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Content Tools for Small Businesses: Build Your Own GPT in Minutes" />
+  <meta name="twitter:description"
+    content="AI content tools for small businesses that help you launch a custom Local SEO article GPT. Learn setup, features, and how to publish consistent content." />
+  <meta name="twitter:image" content="https://bastiontech.org/bastionbanner.png" />
+
+  <!-- ========== Icons ========== -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" crossorigin="anonymous" />
+
+  <!-- ========== Fonts & Tailwind ========== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#48668b',
+            sand: '#cfab6e',
+            coal: '#0b0f14',
+            ink: '#0f172a',
+          },
+          boxShadow: { glow: '0 10px 30px rgba(72,102,139,.2)' },
+          fontFamily: {
+            display: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- ========== JSON-LD ========== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://bastiontech.org/blog/bastiontech-gpt-builder.html"},
+    "headline":"AI Content Tools for Small Businesses: Build Your Own GPT in Minutes",
+    "description":"AI content tools for small businesses that help you launch a custom Local SEO article GPT. Learn setup, features, and how to publish consistent content.",
+    "image":"https://bastiontech.org/bastionbanner.png",
+    "author":{"@type":"Organization","name":"BastionTech","url":"https://bastiontech.org/"},
+    "publisher":{"@type":"Organization","name":"BastionTech","logo":{"@type":"ImageObject","url":"https://bastiontech.org/img/BastionLogo.png"}},
+    "datePublished":"2025-10-07T09:00:00-04:00",
+    "dateModified":"2025-10-07T09:00:00-04:00",
+    "articleSection":"Marketing",
+    "keywords":"AI content tools for small businesses, Local SEO, Custom GPT, Oviedo, Winter Springs, Chuluota, Casselberry, Seminole County, UCF, Oviedo on the Park, Farmers Market, content strategy, marketing automation"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://bastiontech.org/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://bastiontech.org/blog/"},
+      {"@type":"ListItem","position":3,"name":"AI Content Tools for Small Businesses: Build Your Own GPT in Minutes","item":"https://bastiontech.org/blog/bastiontech-gpt-builder.html"}
+    ]
+  }
+  </script>
+
+  <!-- ========== Light Theme Helpers ========== -->
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all .6s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: none;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      line-height: 1.75rem;
+      color: rgba(15, 23, 42, .8);
+    }
+
+    .prose a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .prose h2 {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .prose h3 {
+      font-size: 1.25rem;
+      line-height: 1.9rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-ink antialiased selection:bg-primary/10 selection:text-ink">
+
+  <!-- ===== Header (LIGHT) ===== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-ink/10 text-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="inline-flex items-center gap-2">
+        <img src="/img/BastionBlkLogo.png" alt="BastionTech" class="h-9 w-auto" />
+        <span class="sr-only">BastionTech</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden sm:flex items-center gap-8 text-sm">
+        <!-- Services dropdown -->
+        <div class="relative">
+          <button type="button" class="inline-flex items-center gap-1 hover:text-sand" aria-haspopup="true"
+            aria-expanded="false" aria-controls="menu-services" data-dropdown-btn="services">
+            Services
+            <svg class="h-4 w-4 mt-px" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 111.02 1.1l-4.23 3.825a.75.75 0 01-1.02 0L5.25 8.33a.75.75 0 01-.02-1.12z" />
+            </svg>
+          </button>
+          <div id="menu-services" role="menu" aria-label="Services"
+            class="absolute left-0 mt-2 w-56 rounded-xl border border-ink/10 bg-white shadow-lg p-2 hidden opacity-0 translate-y-1 transition ease-out duration-150"
+            data-dropdown-panel="services" tabindex="-1">
+            <a href="/#packages-web" class="block px-3 py-2 rounded-lg hover:bg-ink/5" role="menuitem">Web Design</a>
+            <a href="/#packages-seo" class="block px-3 py-2 rounded-lg hover:bg-ink/5" role="menuitem">Local SEO</a>
+            <a href="/#site-care" class="block px-3 py-2 rounded-lg hover:bg-ink/5" role="menuitem">Hosting &
+              Maintenance</a>
+          </div>
+        </div>
+
+        <!-- Resources dropdown -->
+        <div class="relative">
+          <button type="button" class="inline-flex items-center gap-1 hover:text-sand" aria-haspopup="true"
+            aria-expanded="false" aria-controls="menu-resources" data-dropdown-btn="resources">
+            Resources
+            <svg class="h-4 w-4 mt-px" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 111.02 1.1l-4.23 3.825a.75.75 0 01-1.02 0L5.25 8.33a.75.75 0 01-.02-1.12z" />
+            </svg>
+          </button>
+          <div id="menu-resources" role="menu" aria-label="Resources"
+            class="absolute left-0 mt-2 w-56 rounded-xl border border-ink/10 bg-white shadow-lg p-2 hidden opacity-0 translate-y-1 transition ease-out duration-150"
+            data-dropdown-panel="resources" tabindex="-1">
+            <a href="/#work" class="block px-3 py-2 rounded-lg hover:bg-ink/5">Case Studies</a>
+            <a href="/marketingquiz.html" class="block px-3 py-2 rounded-lg hover:bg-ink/5">Marketing Quiz</a>
+            <a href="/blog/blog.html" class="block px-3 py-2 rounded-lg hover:bg-ink/5" role="menuitem">Blog</a>
+            <a href="/#faq" class="block px-3 py-2 rounded-lg hover:bg-ink/5" role="menuitem">FAQ</a>
+            <a href="/#contact" class="block px-3 py-2 rounded-lg hover:bg-ink/5" role="menuitem">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <a href="/#contact"
+        class="hidden sm:inline-flex items-center gap-2 text-sm px-3 py-2 rounded-xl bg-primary text-white hover:bg-primary/90 shadow-glow">
+        Get a Quote
+      </a>
+
+      <!-- Mobile: hamburger -->
+      <div class="sm:hidden flex items-center gap-2">
+        <button id="menuBtn"
+          class="inline-flex items-center justify-center h-10 w-10 rounded-lg border border-ink/20 hover:bg-ink/5"
+          aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="iconOpen" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="iconClose" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Mobile menu panel -->
+    <div id="mobileMenu" class="sm:hidden hidden border-t border-ink/10 bg-white">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <ul class="space-y-2 text-sm">
+          <li><a class="block px-2 py-2 rounded hover:bg-ink/5" href="/#work">Case Studies</a></li>
+          <li class="border-t border-ink/10 pt-2">
+            <button class="w-full flex items-center justify-between px-2 py-2 rounded hover:bg-ink/5"
+              aria-expanded="false" data-disclosure="services">
+              <span>Services</span>
+              <svg class="h-4 w-4 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 111.02 1.1l-4.23 3.825a.75.75 0 01-1.02 0L5.25 8.33a.75.75 0 01-.02-1.12z" />
+              </svg>
+            </button>
+            <ul class="mt-1 ml-2 hidden" data-disclosure-panel="services">
+              <li><a class="block px-2 py-2 rounded hover:bg-ink/5" href="/#packages-web">Web Design</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-ink/5" href="/#packages-seo">Local SEO</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-ink/5" href="/#site-care">Hosting & Maintenance</a></li>
+            </ul>
+          </li>
+
+          <li class="border-t border-ink/10 pt-2">
+            <button class="w-full flex items-center justify-between px-2 py-2 rounded hover:bg-ink/5"
+              aria-expanded="false" data-disclosure="resources">
+              <span>Resources</span>
+              <svg class="h-4 w-4 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 111.02 1.1l-4.23 3.825a.75.75 0 01-1.02 0L5.25 8.33a.75.75 0 01-.02-1.12z" />
+              </svg>
+            </button>
+            <ul class="mt-1 ml-2 hidden" data-disclosure-panel="resources">
+              <li><a class="block px-2 py-2 rounded hover:bg-ink/5" href="/#work">Case Studies</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-ink/5" href="/marketingquiz.html">Marketing Quiz</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-ink/5" href="/blog/blog.html">Blog</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-ink/5" href="/#faq">FAQ</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-ink/5" href="/#contact">Contact</a></li>
+            </ul>
+          </li>
+
+          <li class="border-t border-ink/10 pt-2">
+            <a class="block px-2 py-2 rounded hover:bg-ink/5" href="/#contact">Contact</a>
+          </li>
+        </ul>
+
+        <div class="mt-3">
+          <a href="/#contact"
+            class="block text-center w-full rounded-xl bg-primary text-white hover:bg-primary/90 px-4 py-3 font-semibold">
+            Get a Quote
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- spacer -->
+  <div class="h-16"></div>
+
+  <!-- ===== Article ===== -->
+  <main class="pt-10 sm:pt-12">
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <header class="reveal mb-2">
+        <p class="text-xs uppercase tracking-wider text-ink/60">Local Marketing • Oviedo, Florida</p>
+        <h1 class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">AI Content Tools for Small Businesses: Build
+          Your Own GPT in Minutes</h1>
+        <p class="mt-3 lead">AI content tools for small businesses can be simple, safe, and practical. This guide
+          introduces a GPT Builder and shows how you can set it up to publish consistent Local SEO articles for your
+          brand or clients.</p>
+        <div class="mt-3 text-sm text-ink/60">Published Oct 7, 2025 • by BastionTech</div>
+      </header>
+
+      <!-- Share bar -->
+      <aside class="reveal mt-6 rounded-2xl border border-gray-200 bg-gray-50 p-4 text-sm text-gray-700">
+        Share:
+        <a class="underline ml-2"
+          href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbastiontech.org%2Fblog%2Fbastiontech-gpt-builder.html"
+          target="_blank" rel="noopener">LinkedIn</a> •
+        <a class="underline"
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbastiontech.org%2Fblog%2Fbastiontech-gpt-builder.html"
+          target="_blank" rel="noopener">Facebook</a> •
+        <a class="underline"
+          href="https://twitter.com/intent/tweet?text=AI%20Content%20Tools%20for%20Small%20Businesses%3A%20Build%20Your%20Own%20GPT%20in%20Minutes&url=https%3A%2F%2Fbastiontech.org%2Fblog%2Fbastiontech-gpt-builder.html"
+          target="_blank" rel="noopener">X</a>
+      </aside>
+
+      <!-- Table of contents (optional) -->
+      <nav class="reveal mt-8 rounded-xl border border-ink/10 bg-white p-4 text-sm" aria-label="Table of contents">
+        <div class="font-semibold mb-2">What’s inside</div>
+        <ol class="list-decimal list-inside space-y-1">
+          <li><a href="#why" class="underline">Why small businesses need a repeatable content system</a></li>
+          <li><a href="#what" class="underline">AI content tools for small businesses: what this builder does</a></li>
+          <li><a href="#how-it-works" class="underline">How it works at a glance</a></li>
+          <li><a href="#setup" class="underline">Setup guide: from zero to a working content GPT</a></li>
+          <li><a href="#features" class="underline">Key features that keep content consistent</a></li>
+          <li><a href="#use-cases" class="underline">Use cases for Oviedo and Central Florida businesses</a></li>
+          <li><a href="#workflow" class="underline">Weekly workflow for reliable publishing</a></li>
+          <li><a href="#quality" class="underline">Quality signals and Local SEO best practices</a></li>
+          <li><a href="#faq" class="underline">FAQ</a></li>
+          <li><a href="#next-steps" class="underline">Next steps</a></li>
+        </ol>
+      </nav>
+
+      <section class="mt-10 prose max-w-none">
+        <h2 id="why">Why small businesses need a repeatable content system</h2>
+        <p>Local search brings steady leads when your site publishes useful posts on a schedule. The problem is
+          consistency. Owners juggle operations, church, family, and community events. Marketing slides. AI tools
+          promise speed, but many outputs feel generic. What you need is a simple way to capture your brand details once
+          and then write on topics that matter to customers in Oviedo, Winter Springs, Chuluota, and Casselberry.</p>
+        <p>That is where a purpose built builder helps. Instead of starting from scratch each week, you set the rules,
+          tone, and local focus one time. After that, you can generate drafts that follow your structure, use the right
+          keywords, and avoid risky choices like long sentences or fluff. The result is a steady stream of content that
+          fits how people search in Seminole County.</p>
+        <p><strong>Related reading:</strong> For a planning overview, see <a
+            href="https://bastiontech.org/blog/oviedo-marketing-strategy.html">Oviedo marketing strategy by business
+            type</a>.</p>
+
+        <h2 id="what">AI content tools for small businesses: what this builder does</h2>
+        <p>The builder gives you a ready to use kit for plain text Local SEO articles. You enter core business details
+          during a short onboarding. Then it outputs a small ZIP you can upload into a new Custom GPT inside ChatGPT.
+          That custom GPT knows your brand rules and topics and helps you publish high quality posts at a regular
+          cadence.</p>
+        <p>The kit contains four simple files that keep the process organized:</n>
+        </p>
+        <ul>
+          <li><strong>system_prompt.txt</strong> sets the writing rules and inserts your brand and city data.</li>
+          <li><strong>style_guide.md</strong> defines tone and lists words to avoid so drafts stay clean and on brand.
+          </li>
+          <li><strong>internal_links.csv</strong> holds go to links and anchors so articles connect to key pages like
+            services and contact.</li>
+          <li><strong>README.md</strong> gives step by step setup notes for building your Custom GPT.</li>
+        </ul>
+        <p>Each file is plain text. You can open and edit them in any editor. Changes carry through to your next
+          articles.</p>
+
+        <h2 id="how-it-works">How it works at a glance</h2>
+        <p>The builder runs a short intake. You provide basic business facts, the types of topics you want to cover, a
+          few site links, and the voice you prefer. The tool packs that data into the kit. You upload the ZIP when you
+          create your Custom GPT. From there, you ask your new GPT for article drafts. Because the kit encodes your
+          rules, drafts come out with clear headings, short active sentences, and a Local SEO focus.</p>
+        <p>To keep trust, the builder follows simple guardrails. It avoids em dashes, emojis, and loud punctuation. It
+          favors plain English. It limits brand mentions to the final call to action. These choices help your content
+          read like a real local business, not a bot.</p>
+
+        <h2 id="setup">Setup guide: from zero to a working content GPT</h2>
+        <p>Use these steps to set up your content system. This takes less than an hour even if you have never built a
+          Custom GPT before.</p>
+        <h3>1) Open the GPT Builder</h3>
+        <p>Navigate to <a href="https://chatgpt.com/g/g-68e570d5204081919345dee442706944-bastiontech-gpt-builder"
+            target="_blank">BastionTech GPT Builder</a>. Launch the tool and start the guided intake. Have your domain,
+          service area city, nearby areas, and services
+          list ready. If you serve Oviedo on the Park or the Farmers Market, note that too. It will help with local
+          phrases.</p>
+        <h3>2) Complete the onboarding</h3>
+        <p>Answer the questions one by one. You will cover business basics, content focus, important URLs, and tone. If
+          you are an agency, fill this in for each client. Keep answers short and concrete.</p>
+        <h3>3) Download your kit</h3>
+        <p>When you finish, the builder prepares a ZIP that includes the system prompt, style guide, internal links, and
+          a README. Save it in your project folder.</p>
+        <h3>4) Create your Custom GPT</h3>
+        <p>In ChatGPT, start a new Custom GPT. Upload the ZIP. Name it for your business. Set the conversation starters
+          to invite new posts and outlines. Save it and test by asking for a post on a problem your customers face this
+          month.</p>
+        <h3>5) Review and publish</h3>
+        <p>Read the draft with care. Add facts and examples from your shop. Link to the right service pages. Publish on
+          your site. Share to Google Business Profile. Repeat on a weekly rhythm.</p>
+        <p><strong>Related reading:</strong> If you are comparing vendors, see <a
+            href="https://bastiontech.org/blog/choosing-a-digital-agency-oviedo.html">choosing a marketing agency in
+            Oviedo</a>.</p>
+
+        <h2 id="features">Key features that keep content consistent</h2>
+        <ul>
+          <li><strong>Local structure baked in.</strong> The kit guides headings, intros, FAQs, and CTAs so each post
+            follows a steady pattern that searchers understand.</li>
+          <li><strong>Brand rules in plain text.</strong> Tone, banned words, and style live in a simple file. You can
+            adjust them at any time.</li>
+          <li><strong>Link map ready.</strong> A CSV holds anchors and URLs for your most important pages like <a
+              href="https://bastiontech.org/#packages-seo">local SEO packages</a>, <a
+              href="https://bastiontech.org/#packages-web">web design packages</a>, and <a
+              href="https://bastiontech.org/#contact">contact</a>.</li>
+          <li><strong>Clean language defaults.</strong> Short sentences. No fluff. No em dashes, emojis, or heavy
+            punctuation.</li>
+          <li><strong>FAQ before the close.</strong> Every article includes a quick Q&amp;A to handle common objections
+            and long tail searches.</li>
+          <li><strong>Markdown only.</strong> Drafts arrive in Markdown so you can paste into most CMS editors with
+            minimal cleanup.</li>
+        </ul>
+
+        <h2 id="use-cases">Use cases for Oviedo and Central Florida businesses</h2>
+        <p>This tool fits service brands that win on trust and clarity. Think home services, lawn care near Black
+          Hammock, private schools near UCF, Christian counseling, and boutique shops around Sanford and Altamonte
+          Springs. It also helps churches and ministries share event recaps and guidance for families without hiring a
+          full time writer.</p>
+        <p>Agencies can use it to standardize output across many clients. Each client gets a tailored kit. The process
+          scales without losing the local touch.</p>
+
+        <h2 id="workflow">Weekly workflow for reliable publishing</h2>
+        <ol>
+          <li><strong>Pick a topic</strong> tied to a service, a season, or a local event. Example: a guide to preparing
+            AC units before summer in Seminole County.</li>
+          <li><strong>Ask your GPT for a draft.</strong> Give a short prompt with the goal and audience.</li>
+          <li><strong>Fact check and add specifics.</strong> Insert your offers, pricing ranges, service area notes, and
+            unique tips.</li>
+          <li><strong>Link to key pages.</strong> Use your internal link CSV. Add a contact link and one or two service
+            links.</li>
+          <li><strong>Publish and share.</strong> Post to your site and share to Google Business Profile. Repurpose key
+            points for email.</li>
+        </ol>
+        <p>For a quick diagnostic on your plan, try our <a href="https://bastiontech.org/marketingquiz.html">Marketing
+            Quiz</a>.</p>
+
+        <h2 id="quality">Quality signals and Local SEO best practices</h2>
+        <p>Good local content answers a specific question for a neighbor. Keep articles clear and useful. Name nearby
+          areas when they help readers decide. Add opening hours, service ranges, and contact methods. Structure posts
+          with a single H1, descriptive H2s, short paragraphs, and scannable lists.</p>
+        <p>For on page basics, review Google’s documentation on <a
+            href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+            rel="nofollow">helpful content</a>. For deeper keyword mapping and internal linking, see guidance from <a
+            href="https://moz.com/learn/seo/internal-link" rel="nofollow">Moz</a>.</p>
+
+        <h2 id="faq">FAQ</h2>
+        <h3>How is this different from writing with a normal chatbot?</h3>
+        <p>A normal chat starts from zero each time. The builder stores your rules, voice, and link map so your drafts
+          are consistent.</p>
+        <h3>Can I use it for multiple locations?</h3>
+        <p>Yes. Create a kit per location. Each kit can set its own city and nearby areas.</p>
+        <h3>Does it work for agencies?</h3>
+        <p>Yes. Create a kit per client and upload it into a separate Custom GPT for each account.</p>
+        <h3>What if I change my services or tone later?</h3>
+        <p>Edit the style guide or system prompt file and upload a refreshed kit to your Custom GPT.</p>
+        <h3>Will it write sales pages too?</h3>
+        <p>The builder focuses on Local SEO articles. You can still outline sales pages, but keep articles as your core
+          output.</p>
+        <h3>Do I need to know Markdown?</h3>
+        <p>No. Markdown is simple. Headings use # and lists use dashes or numbers. Most CMS tools convert it on paste.
+        </p>
+        <h3>Does it include images?</h3>
+        <p>No. It produces text. You can add images during editing if needed.</p>
+        <h3>Will it overuse my brand name?</h3>
+        <p>No. The rules limit brand mentions to the final CTA so the copy stays helpful and not sales heavy.</p>
+
+        <h2 id="next-steps">Next steps</h2>
+        <p>Set up your builder today and plan a four week content sprint. Aim for one article per week. Keep topics tied
+          to services and seasonal needs. Use internal links to send readers to the right pages. Close with a clear next
+          step. If you want help with strategy or setup, request a short consult below.</p>
+      </section>
+
+      <!-- CTA -->
+      <section id="help" class="mt-12">
+        <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6">
+          <h2 class="text-2xl font-extrabold tracking-tight">Free Consultation: Build Your Content System</h2>
+          <p class="mt-2 text-ink/80">Ready to grow your local presence? Contact BastionTech today to schedule a free
+            consultation and discover how web design and local SEO can help your business thrive. We can help set up
+            your Custom GPT, map topics for Oviedo and Seminole County, and create a weekly plan that fits your budget.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a href="https://bastiontech.org/marketingquiz.html"
+              class="rounded-xl bg-primary hover:bg-primary/90 text-white px-4 py-3 font-semibold shadow-glow">Take Our
+              Marketing Quiz</a>
+            <a href="https://bastiontech.org/#contact"
+              class="rounded-xl border border-primary/40 hover:bg-ink/5 px-4 py-3 font-semibold">Contact Us</a>
+          </div>
+          <p class="mt-3 text-xs text-ink/60">Serving Oviedo, Winter Springs, Chuluota, and Central Florida.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- ===== Footer (light) ===== -->
+  <footer class="border-t border-ink/10 py-10 text-sm text-ink/60">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="y"></span> <a href="https://bastiontech.org">BastionTech</a>. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="tel:+14077962684" class="hover:text-ink font-semibold">📞 (407) 796-2684</a>
+        <a href="/bastionprivacy.html" class="hover:text-ink">Privacy</a>
+        <a href="/termsandconditions.html" class="hover:text-ink">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Header dropdown + hamburger behavior ===== -->
+  <script>
+      (function () {
+        // Mobile hamburger
+        const btn = document.getElementById('menuBtn');
+        const panel = document.getElementById('mobileMenu');
+        const iconOpen = document.getElementById('iconOpen');
+        const iconClose = document.getElementById('iconClose');
+
+        function closeMenu() {
+          if (!panel) return;
+          panel.classList.add('hidden');
+          if (iconOpen) iconOpen.classList.remove('hidden');
+          if (iconClose) iconClose.classList.add('hidden');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+        function openMenu() {
+          if (!panel) return;
+          panel.classList.remove('hidden');
+          if (iconOpen) iconOpen.classList.add('hidden');
+          if (iconClose) iconClose.classList.remove('hidden');
+          if (btn) btn.setAttribute('aria-expanded', 'true');
+        }
+        if (btn) {
+          btn.addEventListener('click', () => {
+            const isOpen = btn.getAttribute('aria-expanded') === 'true';
+            isOpen ? closeMenu() : openMenu();
+          });
+        }
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+        if (panel) {
+          panel.addEventListener('click', (e) => { if (e.target.tagName === 'A') closeMenu(); });
+        }
+
+        //Mobile Dropdown
+        document.querySelectorAll('[data-disclosure]').forEach(dBtn => {
+          dBtn.addEventListener('click', () => {
+            const key = dBtn.getAttribute('data-disclosure');
+            const dPanel = document.querySelector(`[data-disclosure-panel="${key}"]`);
+            const expanded = dBtn.getAttribute('aria-expanded') === 'true';
+            dBtn.setAttribute('aria-expanded', String(!expanded));
+            if (dPanel) dPanel.classList.toggle('hidden', expanded);
+
+            // rotate the chevron for feedback
+            const icon = dBtn.querySelector('svg');
+            if (icon) icon.style.transform = expanded ? 'rotate(0deg)' : 'rotate(180deg)';
+          });
+        });
+
+        // Desktop dropdowns
+        const btnSel = '[data-dropdown-btn]';
+        const panelSel = '[data-dropdown-panel]';
+        const buttons = Array.from(document.querySelectorAll(btnSel));
+        const panels = Array.from(document.querySelectorAll(panelSel));
+
+        function closeAllDropdowns() {
+          buttons.forEach(b => b.setAttribute('aria-expanded', 'false'));
+          panels.forEach(p => {
+            p.classList.add('hidden', 'opacity-0', 'translate-y-1');
+            p.classList.remove('opacity-100', 'translate-y-0');
+          });
+        }
+
+        function openDropdown(key) {
+          const b = document.querySelector(`[data-dropdown-btn="${key}"]`);
+          const p = document.querySelector(`[data-dropdown-panel="${key}"]`);
+          if (!b || !p) return;
+
+          b.setAttribute('aria-expanded', 'true');
+          p.classList.remove('hidden');
+          requestAnimationFrame(() => {
+            p.classList.remove('opacity-0', 'translate-y-1');
+            p.classList.add('opacity-100', 'translate-y-0');
+          });
+
+          const firstFocusable = p.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+          if (firstFocusable) firstFocusable.focus({ preventScroll: true });
+        }
+
+        buttons.forEach(b => {
+          b.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const key = b.getAttribute('data-dropdown-btn');
+            const expanded = b.getAttribute('aria-expanded') === 'true';
+            closeAllDropdowns();
+            if (!expanded) openDropdown(key);
+          });
+        });
+
+        // Close on outside click / ESC / link click
+        document.addEventListener('click', (e) => {
+          if (!e.target.closest(panelSel) && !e.target.closest(btnSel)) closeAllDropdowns();
+        });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAllDropdowns(); });
+        panels.forEach(p => p.addEventListener('click', (e) => { if (e.target.tagName === 'A') closeAllDropdowns(); }));
+
+        // Reveal + footer year
+        const reveals = document.querySelectorAll('.reveal');
+        const onScroll = () => {
+          reveals.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 60) el.classList.add('show');
+          });
+        };
+        document.addEventListener('scroll', () => requestAnimationFrame(onScroll), { passive: true });
+        window.addEventListener('load', () => { onScroll(); const y = document.getElementById('y'); if (y) y.textContent = new Date().getFullYear(); });
+      })();
+  </script>
+</body>
+
+</html>
