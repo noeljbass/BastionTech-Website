@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bastion Technology Services | Terms and Conditions</title>
+  <meta name="description" content="Terms & Conditions for Bastion Technology Services.">
+  <meta name="robots" content="noindex,follow">
+  <meta name="googlebot" content="noindex,follow">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#48668b',
+            sand: '#cfab6e',
+            coal: '#0b0f14',
+            ink: '#0f172a',
+          },
+          boxShadow: {
+            glow: '0 10px 30px rgba(72,102,139,.3)'
+          },
+          fontFamily: {
+            display: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --scroll: 0;
+    }
+
+    .parallax {
+      perspective: 1px;
+      transform-style: preserve-3d;
+      overflow-x: hidden;
+    }
+
+    .parallax-layer {
+      position: fixed;
+      inset: 0;
+      z-index: -10;
+      pointer-events: none;
+      transition: opacity .4s ease;
+      will-change: transform;
+    }
+
+    .parallax-layer[data-speed] {
+      transform: translate3d(0, calc(var(--scroll) * var(--speed, .1)), 0);
+    }
+
+    .blob {
+      filter: blur(40px) saturate(120%);
+      opacity: .35;
+      mix-blend-mode: screen;
+    }
+
+    .noise:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: .05;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><defs><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter></defs><rect width="100%" height="100%" filter="url(%23n)" opacity="0.4"></rect></svg>');
+      background-size: 300px 300px;
+    }
+
+    .grid-fade {
+      background-image: linear-gradient(rgba(255, 255, 255, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .07) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(circle at 50% 30%, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 70%);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all .6s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: none;
+    }
+
+    @keyframes floatyA {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-10px) rotate(-0.4deg);
+      }
+
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+    }
+
+    @keyframes floatyB {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-6px) rotate(0.4deg);
+      }
+
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+    }
+
+    .animate-floaty-a {
+      animation: floatyA 7.5s ease-in-out infinite;
+    }
+
+    .animate-floaty-b {
+      animation: floatyB 10s ease-in-out infinite;
+      animation-delay: .8s;
+    }
+  </style>
+
+</head>
+
+<body class="bg-ink text-white antialiased selection:bg-primary/30 selection:text-white">
+
+  <!-- Parallax multi-layer background -->
+  <div class="parallax">
+    <div class="parallax-layer" data-speed="-0.06"
+      style="--speed:-0.06; background: radial-gradient(60% 60% at 20% 10%, rgba(72,102,139,.45), rgba(11,15,20,0) 60%)">
+    </div>
+    <div class="parallax-layer grid-fade" data-speed="-0.03" style="--speed:-0.03"></div>
+    <div class="parallax-layer blob" data-speed="-0.09"
+      style="--speed:-0.09; background: radial-gradient(35rem 35rem at 80% 20%, rgba(207,171,110,.55), rgba(11,15,20,0) 60%)">
+    </div>
+    <div class="parallax-layer blob" data-speed="-0.12"
+      style="--speed:-0.12; background: radial-gradient(28rem 28rem at 10% 70%, rgba(72,102,139,.55), rgba(11,15,20,0) 60%)">
+    </div>
+  </div>
+
+
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-ink/55 border-b border-white/5">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="/" class="inline-flex items-center gap-2 h-full">
+        <img src="/img/BastionLogo.png" alt="BastionTech Logo" class="h-10 w-auto object-contain" />
+      </a>
+      <a href="https://bastiontech.org"
+        class="inline-flex items-center gap-2 text-sm px-3 py-2 rounded-xl bg-primary hover:bg-primary/90 shadow-glow">
+        Go Back
+      </a>
+    </nav>
+  </header>
+
+  <main class="pt-28">
+
+    <section class="relative py-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal mb-8">
+          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Terms & Conditions</h1>
+          <p class="mt-2 text-white/70 max-w-3xl">The rules and conditions governing your use of Bastion Technology
+            Services.</p>
+        </div>
+        <article class="reveal rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 sm:p-8 space-y-8">
+          <section>
+            <h2 class="text-xl font-semibold">Introduction</h2>
+            <p class="mt-2 text-white/80">By using our website and services, you agree to these Terms & Conditions. If
+              you disagree with any part, please discontinue use.</p>
+          </section>
+          <section>
+            <h2 class="text-xl font-semibold">Services Provided</h2>
+            <p class="mt-2 text-white/80">We offer web design, privacy protection, SEO optimization, and educational
+              services. We may modify or discontinue offerings at any time.</p>
+          </section>
+          <section>
+            <h2 class="text-xl font-semibold">User Responsibilities</h2>
+            <ul class="mt-2 list-disc list-inside space-y-1 text-white/80">
+              <li>Provide accurate information when engaging our services</li>
+              <li>Use services lawfully and respectfully</li>
+              <li>Avoid actions that harm or disrupt our services or other users</li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="text-xl font-semibold">Intellectual Property</h2>
+            <p class="mt-2 text-white/80">All content and trademarks are the property of Bastion Technology Services or
+              licensors. Do not reproduce or create derivatives without permission.</p>
+          </section>
+          <section>
+            <h2 class="text-xl font-semibold">Limitation of Liability</h2>
+            <p class="mt-2 text-white/80">To the fullest extent lawful, we are not liable for indirect, incidental, or
+              consequential damages arising from use of our services.</p>
+          </section>
+          <section>
+            <h2 class="text-xl font-semibold">Indemnification</h2>
+            <p class="mt-2 text-white/80">You agree to indemnify and hold harmless Bastion Technology Services and
+              affiliates for claims arising from your use or breach of these terms.</p>
+          </section>
+          <section>
+            <h2 class="text-xl font-semibold">Changes to Terms</h2>
+            <p class="mt-2 text-white/80">We may update these terms by posting revisions here. Continued use constitutes
+              acceptance.</p>
+          </section>
+          <section>
+            <h2 class="text-xl font-semibold">Governing Law</h2>
+            <p class="mt-2 text-white/80">These terms are governed by the laws of Florida, USA, without regard to
+              conflict-of-law rules.</p>
+          </section>
+          <section>
+            <h2 class="text-xl font-semibold">Contact</h2>
+            <p class="mt-2 text-white/80">Email: <a href="mailto:mail@bastiontech.org"
+                class="text-sand underline">mail@bastiontech.org</a> • Website: <a href="https://www.bastiontech.org"
+                class="text-sand underline">bastiontech.org</a></p>
+          </section>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-white/5 py-10 text-sm text-white/60 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="y"></span> BastionTech. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="bastionprivacy.html" class="hover:text-white">Privacy</a>
+        <a href="termsandconditions.html" class="hover:text-white">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    // Parallax & reveal
+    const layers = document.querySelectorAll('.parallax-layer');
+    const reveals = document.querySelectorAll('.reveal');
+    const onScroll = () => {
+      const s = window.scrollY;
+      document.documentElement.style.setProperty('--scroll', s + 'px');
+      layers.forEach(el => {
+        const speed = parseFloat(el.dataset.speed || 0);
+        el.style.transform = `translate3d(0, ${s * speed}px, 0)`;
+      });
+      reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 60) el.classList.add('show');
+      });
+    };
+    document.addEventListener('scroll', () => requestAnimationFrame(onScroll), { passive: true });
+    window.addEventListener('load', () => { onScroll(); const y = document.getElementById('y'); if (y) y.textContent = new Date().getFullYear(); });
+  </script>
+
+</body>
+
+</html>

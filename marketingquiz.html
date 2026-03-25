@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Which Marketing Strategy Fits Your Business? | BastionTech</title>
+  <meta name="description" content="Take this quick 3-step quiz to identify the best marketing channels for your business. Get a tailored plan instantly." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BastionTech" />
+  <meta property="og:title" content="Which Marketing Strategy Fits Your Business? | BastionTech" />
+  <meta property="og:description" content="Quick 3-step quiz to find your best marketing mix. Get a tailored plan instantly." />
+  <meta property="og:image" content="https://bastiontech.org/bastionbanner.png" />
+  <meta property="og:image:alt" content="BastionTech — Marketing Strategy Quiz" />
+  <meta property="og:url" content="https://bastiontech.org/marketing-quiz.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Which Marketing Strategy Fits Your Business? | BastionTech" />
+  <meta name="twitter:description" content="Quick 3-step quiz to find your best marketing mix. Get a tailored plan instantly." />
+  <meta name="twitter:image" content="https://bastiontech.org/bastionbanner.png" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary:'#48668b', sand:'#cfab6e', coal:'#0b0f14', ink:'#0f172a' },
+          boxShadow: { glow:'0 10px 30px rgba(72,102,139,.3)' },
+          fontFamily: {
+            display:['Inter','ui-sans-serif','system-ui','sans-serif'],
+            sans:['Inter','ui-sans-serif','system-ui','sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    .card { backdrop-filter: blur(6px); }
+  </style>
+</head>
+<body class="bg-ink text-white antialiased min-h-screen">
+  <header class="border-b border-white/10 bg-ink/95 sticky top-0 z-40">
+    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="/" class="inline-flex items-center gap-2">
+        <img src="/img/BastionLogo.png" alt="BastionTech" class="h-9 w-auto" />
+        <span class="sr-only">BastionTech</span>
+      </a>
+      <a href="/#contact" class="hidden sm:inline-flex items-center gap-2 text-sm px-3 py-2 rounded-xl bg-primary hover:bg-primary/90 shadow-glow">Get a Quote</a>
+    </div>
+  </header>
+
+  <main class="relative py-10 sm:py-14">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-primary/30 via-sand/35 to-transparent blur-2xl opacity-70"></div>
+
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto">
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Which Marketing Strategy Fits Your Business?</h1>
+        <p class="mt-3 text-white/70">Three quick steps. Get a custom plan instantly based on your business model and what you’re already doing.</p>
+      </div>
+
+      <!-- Progress -->
+      <div class="mt-8 flex items-center justify-center gap-2 text-xs text-white/60" role="status" aria-label="Progress">
+        <div id="dot1" class="h-2 w-2 rounded-full bg-white/30"></div>
+        <div id="dot2" class="h-2 w-2 rounded-full bg-white/20"></div>
+        <div id="dot3" class="h-2 w-2 rounded-full bg-white/20"></div>
+      </div>
+
+      <form id="quizForm" action="/quiz-lead.php" method="POST" class="mt-6 space-y-6" novalidate>
+        <!-- Honeypot -->
+        <input type="text" name="honeypot" id="honeypot" class="hidden" autocomplete="off" tabindex="-1" aria-hidden="true">
+        <!-- UTM passthrough (optional for sharing at scale) -->
+        <input type="hidden" name="utm_source" id="utm_source">
+        <input type="hidden" name="utm_medium" id="utm_medium">
+        <input type="hidden" name="utm_campaign" id="utm_campaign">
+
+        <!-- STEP 1 -->
+        <section id="step1" class="rounded-2xl border border-white/10 bg-white/5 p-6 card" aria-labelledby="step1-title">
+          <div class="text-sand text-sm font-semibold">Step 1</div>
+          <h2 id="step1-title" class="mt-1 text-xl font-semibold">Identify your business type</h2>
+          <p class="mt-2 text-sm text-white/70">Pick the category that fits best. We’ll tailor recommendations accordingly.</p>
+
+          <div class="mt-5 grid gap-4">
+            <!-- Unplanned / Emergency -->
+            <label class="block rounded-xl border border-white/10 p-4 hover:border-white/20 cursor-pointer">
+              <input type="radio" name="business_type" value="Emergency" class="peer sr-only" required aria-required="true">
+              <div class="peer-checked:outline peer-checked:outline-2 peer-checked:outline-primary/60">
+                <div class="font-medium">Unplanned / Emergency Services</div>
+                <p class="text-sm text-white/70">People don’t think about your service until there’s an urgent need.</p>
+                <p class="mt-1 text-xs text-white/60">Examples: plumbing emergencies, locksmiths, HVAC repair, towing, emergency dental, urgent pest control, IT triage, disaster restoration.</p>
+              </div>
+            </label>
+
+            <!-- Planned Services -->
+            <label class="block rounded-xl border border-white/10 p-4 hover:border-white/20 cursor-pointer">
+              <input type="radio" name="business_type" value="PlannedLocal" class="peer sr-only" required>
+              <div class="peer-checked:outline peer-checked:outline-2 peer-checked:outline-primary/60">
+                <div class="font-medium">Planned Services</div>
+                <p class="text-sm text-white/70">People plan ahead, compare a few options, look at photos and reviews, and choose the best fit.</p>
+                <p class="mt-1 text-xs text-white/60">Examples: landscaping, roofing, photography, tutoring, fitness/yoga, chiropractic, massage, event/catering, childcare, pet/vet.</p>
+              </div>
+            </label>
+
+            <!-- Retail / Ecommerce -->
+            <label class="block rounded-xl border border-white/10 p-4 hover:border-white/20 cursor-pointer">
+              <input type="radio" name="business_type" value="RetailEcom" class="peer sr-only" required>
+              <div class="peer-checked:outline peer-checked:outline-2 peer-checked:outline-primary/60">
+                <div class="font-medium">Retail / Ecommerce</div>
+                <p class="text-sm text-white/70">Shoppers discover products while browsing and buy when it’s easy, clear, and fast often after seeing it more than once.</p>
+                <p class="mt-1 text-xs text-white/60">Examples: boutiques, handmade goods, clothing, stationery, specialty foods, hobby/toy, health & beauty, sporting/outdoor gear.</p>
+              </div>
+            </label>
+
+            <!-- Professional B2B Services -->
+            <label class="block rounded-2xl border border-white/10 p-4 hover:border-white/20 cursor-pointer">
+              <input type="radio" name="business_type" value="B2B" class="peer sr-only" required>
+              <div class="peer-checked:outline peer-checked:outline-2 peer-checked:outline-primary/60">
+                <div class="font-medium">Professional B2B Services</div>
+                <p class="text-sm text-white/70">Decisions involve teams, take longer, and rely on clear expertise, real examples, and trust.</p>
+                <p class="mt-1 text-xs text-white/60">Examples: consulting, software/dev, accounting, legal, IT/MSP, HR, staffing, printing/signage, logistics.</p>
+              </div>
+            </label>
+
+            <!-- Recurring / Subscription -->
+            <label class="block rounded-xl border border-white/10 p-4 hover:border-white/20 cursor-pointer">
+              <input type="radio" name="business_type" value="Recurring" class="peer sr-only" required>
+              <div class="peer-checked:outline peer-checked:outline-2 peer-checked:outline-primary/60">
+                <div class="font-medium">Recurring / Subscription</div>
+                <p class="text-sm text-white/70">People stick around when it’s easy to start, easy to keep using, and they see steady value over time.</p>
+                <p class="mt-1 text-xs text-white/60">Examples: SaaS, subscription boxes, memberships, meal prep, fitness, wellness apps, courses/newsletters, maintenance plans.</p>
+              </div>
+            </label>
+
+            <!-- Mission-Driven / Cause-Based -->
+            <label class="block rounded-xl border border-white/10 p-4 hover:border-white/20 cursor-pointer">
+              <input type="radio" name="business_type" value="Mission" class="peer sr-only" required>
+              <div class="peer-checked:outline peer-checked:outline-2 peer-checked:outline-primary/60">
+                <div class="font-medium">Mission-Driven / Cause-Based</div>
+                <p class="text-sm text-white/70">People join and donate when they understand the mission, see real impact, and feel invited to take part.</p>
+                <p class="mt-1 text-xs text-white/60">Examples: nonprofits, churches, family farms, homeschool groups, co-ops, counseling centers, community orgs.</p>
+              </div>
+            </label>
+          </div>
+
+          <div class="mt-6 flex justify-end">
+            <button type="button" id="next1" class="rounded-xl bg-primary hover:bg-primary/90 px-5 py-3 font-semibold">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 2 -->
+        <section id="step2" class="hidden rounded-2xl border border-white/10 bg-white/5 p-6 card" aria-labelledby="step2-title">
+          <div class="text-sand text-sm font-semibold">Step 2</div>
+          <h2 id="step2-title" class="mt-1 text-xl font-semibold">What are you doing (or tried) so far?</h2>
+          <p class="mt-2 text-sm text-white/70">Check all that apply. This helps us calibrate next steps.</p>
+
+          <div class="mt-5 grid sm:grid-cols-2 gap-3 text-sm">
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="SEO"> <span>SEO / on-page optimization</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="Listings"> <span>Business Listing (Google Business Profile)</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="GoogleAds"> <span>Google Ads (search / click-to-call)</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="MetaAds"> <span>Meta Ads (Facebook/Instagram)</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="Retargeting"> <span>Retargeting / remarketing pixels</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="InstagramTikTok"> <span>Instagram / TikTok content</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="Facebook"> <span>Facebook page / groups</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="Email"> <span>Email newsletter / lead magnets</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="Blogging"> <span>Blogging / case studies</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="Webinars"> <span>Webinars / workshops / events</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="LinkedIn"> <span>LinkedIn outreach / content</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="Influencer"> <span>Influencer / UGC partnerships</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="Referrals"> <span>Referrals / affiliates / partnerships</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="SMS"> <span>SMS marketing</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="DirectMail"> <span>Direct mail / print</span></label>
+            <label class="inline-flex items-start gap-3"><input type="checkbox" name="marketing[]" value="YouTubePodcast"> <span>YouTube / podcast</span></label>
+          </div>
+
+          <div class="mt-4">
+            <label for="other" class="block text-sm text-white/70">Other (optional)</label>
+            <input id="other" name="other" type="text" placeholder="Anything else you’ve tried or plan to try" class="mt-1 w-full rounded-xl bg-white/10 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50" />
+          </div>
+
+          <div class="mt-6 flex justify-between">
+            <button type="button" id="back2" class="rounded-xl border border-white/10 hover:border-white/20 px-5 py-3 font-semibold">Back</button>
+            <button type="button" id="next2" class="rounded-xl bg-primary hover:bg-primary/90 px-5 py-3 font-semibold">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 3 -->
+        <section id="step3" class="hidden rounded-2xl border border-white/10 bg-white/5 p-6 card" aria-labelledby="step3-title">
+          <div class="text-sand text-sm font-semibold">Step 3</div>
+          <h2 id="step3-title" class="mt-1 text-xl font-semibold">Where should we send your results?</h2>
+          <p class="mt-2 text-sm text-white/70">Enter your details and we’ll show your tailored plan instantly.</p>
+
+          <div class="mt-5 grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm text-white/70">Your Name</label>
+              <input type="text" id="name" name="name" required class="mt-1 w-full rounded-xl bg-white/10 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50" />
+            </div>
+            <div>
+              <label for="business" class="block text-sm text-white/70">Business Name</label>
+              <input type="text" id="business" name="business" required class="mt-1 w-full rounded-xl bg-white/10 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="email" class="block text-sm text-white/70">Email</label>
+              <input type="email" id="email" name="email" required class="mt-1 w-full rounded-xl bg-white/10 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50" />
+            </div>
+          </div>
+          <p class="mt-3 text-xs text-white/60">By submitting, you agree to a quick email follow-up and occasional <strong>free service updates</strong>. Unsubscribe anytime.</p>
+
+          <!-- Hidden compiled summary (for server-side use) -->
+          <input type="hidden" name="compiled_summary" id="compiled_summary" />
+
+          <div class="mt-6 flex justify-end">
+            <button type="submit" class="rounded-xl bg-primary hover:bg-primary/90 px-5 py-3 font-semibold">
+              Show my plan
+            </button>
+          </div>
+        </section>
+
+        <!-- RESULTS -->
+        <section id="results" class="hidden rounded-2xl border border-white/10 bg-white/5 p-6 card" aria-live="polite">
+          <div class="text-sand text-sm font-semibold">Your Results</div>
+          <h2 class="mt-1 text-xl font-semibold">What to focus on next</h2>
+          <p id="whyCopy" class="mt-2 text-sm text-white/80"></p>
+
+          <div class="mt-5">
+            <h3 class="font-semibold flex items-center gap-2">Recommended for your business</h3>
+            <ul id="optimalList" class="mt-3 space-y-2 text-sm text-white/80"></ul>
+          </div>
+
+          <div class="mt-6 rounded-xl bg-white/5 border border-white/10 p-4 text-sm text-white/80">
+            <p class="font-semibold">Want help implementing this plan?</p>
+            <p class="mt-1">We’ll prioritize the essentials and set up the pieces that actually move the needle.</p>
+            <a href="/#contact" class="mt-3 inline-flex items-center gap-2 rounded-xl bg-primary hover:bg-primary/90 px-4 py-2 font-semibold">
+              Talk to BastionTech
+            </a>
+          </div>
+
+          <div class="mt-6 flex justify-between">
+            <button type="button" id="resultsBack" class="rounded-xl border border-white/10 hover:border-white/20 px-5 py-3 font-semibold">Back</button>
+            <a href="/" class="rounded-xl bg-primary hover:bg-primary/90 px-5 py-3 font-semibold">Done</a>
+          </div>
+        </section>
+      </form>
+    </div>
+  </main>
+
+  <!-- JS -->
+  <script>
+    // Capture UTM params for sharing at scale
+    (function(){
+      const params = new URLSearchParams(location.search);
+      ['utm_source','utm_medium','utm_campaign'].forEach(k=>{
+        const v = params.get(k);
+        if (v) document.getElementById(k).value = v;
+      });
+    })();
+
+    // Background lead sender (fire-and-forget)
+    async function sendLead(formEl) {
+      try {
+        const fd = new FormData(formEl);
+        fd.append('source', 'marketing-quiz');
+        await fetch(formEl.action || '/quiz-lead.php', {
+          method: 'POST',
+          body: fd,
+          headers: { 'Accept': 'application/json' },
+          keepalive: true
+        });
+      } catch (err) {
+        console.warn('Lead post failed:', err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // ===== Elements
+      const step1 = document.getElementById('step1');
+      const step2 = document.getElementById('step2');
+      const step3 = document.getElementById('step3');
+      const results = document.getElementById('results');
+
+      const dots = [
+        document.getElementById('dot1'),
+        document.getElementById('dot2'),
+        document.getElementById('dot3')
+      ];
+
+      const next1 = document.getElementById('next1');
+      const back2 = document.getElementById('back2');
+      const next2 = document.getElementById('next2');
+      const form  = document.getElementById('quizForm');
+
+      const optimalList = document.getElementById('optimalList');
+      const resultsBack = document.getElementById('resultsBack');
+      const whyCopyEl   = document.getElementById('whyCopy');
+
+      // ===== Helpers
+      function setDots(i){
+        dots.forEach((d,idx)=>{ d.style.backgroundColor = idx===i ? 'rgba(255,255,255,.9)' : 'rgba(255,255,255,.2)'; });
+      }
+      function showStep(current, next, dotIndex) {
+        current.classList.add('hidden');
+        next.classList.remove('hidden');
+        setDots(dotIndex);
+      }
+
+      // ===== Step wiring
+      next1.addEventListener('click', () => {
+        const chosen = document.querySelector('input[name="business_type"]:checked');
+        if (!chosen) { alert('Please choose a business type.'); return; }
+        showStep(step1, step2, 1);
+      });
+      back2.addEventListener('click', () => showStep(step2, step1, 0));
+      next2.addEventListener('click', () => showStep(step2, step3, 2));
+
+      // ===== Recommendation logic (de-localized)
+      const optimalByType = {
+        Emergency:    ['Listings','SEO','GoogleAds'],
+        PlannedLocal: ['SEO','Reviews','Email','Facebook','InstagramTikTok'],
+        RetailEcom:   ['InstagramTikTok','MetaAds','Retargeting','Email','Influencer','SEO'],
+        B2B:          ['Blogging','LinkedIn','SEO','Webinars','Email'],
+        Recurring:    ['Email','SMS','Referrals','Facebook','InstagramTikTok'],
+        Mission:      ['Email','YouTubePodcast','Facebook','InstagramTikTok','Webinars','SEO']
+      };
+
+      const niceLabels = {
+        SEO:'SEO / on-page optimization',
+        Listings:'Business Listing (Google Business Profile)',
+        GoogleAds:'Google Ads (search / click-to-call)',
+        MetaAds:'Meta Ads (Facebook/Instagram)',
+        Retargeting:'Retargeting / remarketing pixels',
+        InstagramTikTok:'Instagram / TikTok content',
+        Facebook:'Facebook page / groups',
+        Email:'Email newsletter / lead magnets',
+        Blogging:'Blogging / case studies',
+        Webinars:'Webinars / workshops / events',
+        LinkedIn:'LinkedIn outreach / content',
+        Influencer:'Influencer / UGC partnerships',
+        Referrals:'Referrals / affiliates / partnerships',
+        SMS:'SMS marketing',
+        DirectMail:'Direct mail / print',
+        YouTubePodcast:'YouTube / podcast',
+        Reviews:'Reviews / testimonials'
+      };
+
+      // Friendly “why this works” copy per type (no regional/local phrasing)
+      const whyCopy = {
+        Emergency:
+          "When people have an urgent problem, they act fast. You need to appear prominently where they search and make it effortless to contact you. Strong business listings, search visibility, and click-to-call ads are the highest-leverage pieces. Longer nurture plays can wait.",
+        PlannedLocal:
+          "Customers compare options before booking. Clear service pages, strong reviews, and proof of work build confidence. Search visibility puts you in front of high-intent buyers, while simple social and light email follow-ups keep you top-of-mind after a quote.",
+        RetailEcom:
+          "Shoppers often discover products while scrolling and purchase after a few touchpoints. Short videos, creator content, and retargeting bring people back to finish checkout. Email drives launches and promos. Search helps when buyers look for specific products.",
+        B2B:
+          "B2B decisions involve teams and longer cycles. Useful articles, case studies, and webinars demonstrate expertise. LinkedIn is where buyers research and connect. Search captures intent when someone is evaluating providers.",
+        Recurring:
+          "Subscriptions grow by getting users to value quickly and sustaining engagement. Helpful onboarding, periodic tips via email/SMS, and community reduce churn. Referrals kick in once customers see consistent results.",
+        Mission:
+          "People get involved when the story and impact are clear. Email and video share outcomes, events build community, and social invites participation. Search makes your programs easy to find when people are looking."
+      };
+
+      const liCheck = (text) => `
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 inline-flex items-center justify-center h-5 w-5 rounded-full bg-emerald-500/20 border border-emerald-500/50">
+            <svg viewBox="0 0 24 24" class="h-3.5 w-3.5"><path fill="currentColor" d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.4-1.4z"/></svg>
+          </span>
+          <span>${text}</span>
+        </li>`;
+
+      // ===== Submit -> show results inline + background lead post
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const typeRadio = document.querySelector('input[name="business_type"]:checked');
+        if (!typeRadio) { alert('Please choose a business type.'); return; }
+
+        const email = (document.getElementById('email')?.value || '').trim();
+        if (!email) { alert('Please enter your email.'); return; }
+        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        if (!emailValid) { alert('Please enter a valid email.'); return; }
+
+        const type = typeRadio.value;
+
+        // Fill the why/explanation paragraph
+        whyCopyEl.textContent = whyCopy[type] || "";
+
+        // Fill list with only recommended items
+        optimalList.innerHTML = '';
+        (optimalByType[type] || []).forEach(code => {
+          optimalList.insertAdjacentHTML('beforeend', liCheck(niceLabels[code] || code));
+        });
+
+        // Reveal results
+        step3.classList.add('hidden');
+        results.classList.remove('hidden');
+
+        // Fire-and-forget lead capture to server
+        sendLead(form);
+      });
+
+      // Results -> back to Step 3
+      resultsBack.addEventListener('click', () => {
+        results.classList.add('hidden');
+        step3.classList.remove('hidden');
+        setDots(2);
+      });
+
+      // Start dots on step 1
+      setDots(0);
+    });
+  </script>
+</body>
+</html>

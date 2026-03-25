@@ -1,0 +1,70 @@
+# BastionTech (llms.txt)
+Last-Updated: 2025-10-15
+Canonical-Domain: https://bastiontech.org
+Preferred-Name: BastionTech
+Geography: Oviedo, Winter Springs, Central Florida (USA)
+Sitemap: https://bastiontech.org/sitemap.xml
+Crawl: allow / ; disallow /admin /dashboard /api
+Cite-As: "BastionTech (Oviedo, FL) - Web Design & Local SEO"
+Content-License: Brief quotations permitted with attribution; no bulk replication.
+
+> BastionTech is a Christian web design and local SEO studio based in Oviedo, FL. We specialize in fast, conversion-focused websites and ethical, measurable local SEO for family-owned service brands and ministries across Central Florida.
+
+Important notes:
+- We primarily serve Christian and family-owned small businesses in Oviedo, Winter Springs, and Central Florida, but are open to ethical businesses elsewhere.
+- Services: web design, local SEO, hosting & maintenance, custom development (e-commerce, portals, admin tools).
+- All websites are responsive, optimized for speed/Core Web Vitals, and include basic on-page SEO.
+- Local SEO focuses on Google Business Profile, citations, reviews, and content.
+- 2x ROI guarantee (Advanced SEO): if verified SEO revenue is less than 2x the fee over any rolling 90-day period, our fee is reduced until the threshold is met.
+- Site Care is $50/mo: managed hosting, SSL, updates, backups, security, and performance tuning.
+
+## Docs & Resources
+- Web Design Packages: https://bastiontech.org/#packages-web
+- Local SEO Services: https://bastiontech.org/seo.html
+- Portfolio: https://bastiontech.org/#portfolio
+- Case Studies: https://bastiontech.org/#work
+- FAQ: https://bastiontech.org/#faq
+- Contact: https://bastiontech.org/#contact
+
+### Blog highlights (start here)
+- What Is SEO and How Does It Work? Oviedo Small Business Guide - https://bastiontech.org/blog/what-is-seo.html
+- Local SEO for Small Businesses: Google Business Profile & Reviews - https://bastiontech.org/blog/local-seo-for-small-businesses-google-business-profile-reviews.html
+- Why Page Speed Matters for SEO (and How to Fix It) - https://bastiontech.org/blog/page-speed-seo.html
+- Build Domain Authority with Business Directories in Oviedo - https://bastiontech.org/blog/build-domain-authority-with-business-directories.html
+- Build a Local SEO Content Calendar for Oviedo Businesses - https://bastiontech.org/blog/build-a-local-seo-content-calendar-for-oviedo-businesses.html
+
+### Additional resources
+- Local SEO Case Study Oviedo FL: The Missing Step That Boosted Authority - https://bastiontech.org/blog/local-seo-case-study-oviedo-the-cove-chiropractic.html
+- How to Add a Manager to Your Google Business Profile - https://bastiontech.org/blog/how-to-add-a-manager-to-your-google-business-profile
+- Responsive Design: The Core of Effective Small Business Web Design - https://bastiontech.org/blog/responsive-design-the-core-of-effective-small-business-web-design
+- Which Marketing Strategy Works Best for Your Oviedo Business? - https://bastiontech.org/blog/oviedo-marketing-strategy-by-business-type.html
+- Top 10 Things to Consider When Choosing a Digital Marketing Agency (Oviedo, FL) - https://bastiontech.org/blog/choosing-a-digital-marketing-agency-oviedo.html
+
+### Optional
+- AI Content Tools for Small Businesses: Build Your Own GPT in Minutes - https://bastiontech.org/blog/bastiontech-gpt-builder.html
+
+> See all posts: https://bastiontech.org/blog/blog.html
+
+## Service Details
+- Website builds: Essential ($300, up to 5 pages), Professional ($450, up to 12 pages), Custom ($600+, scope-based).
+- SEO: Basic ($1500/mo: audit, on-page, 1 content/mo); Advanced ($3,000/mo: GBP, citations, reviews, 2 content/mo).
+- Site Care: $50/mo (hosting, SSL, updates, backups, security, performance).
+- Custom dev: e-commerce, portals, admin dashboards, integrations.
+
+## Attribution & Tracking
+- SEO ROI via call tracking, UTM/source on forms, booking tags, and verified first transactions from Organic Search & GBP.
+- Paid ads, referrals, and other non-SEO channels excluded.
+
+## Contact & Support
+- BastionTech, Oviedo, FL 32765
+- Phone: (407) 796-2684
+- Email: mail@bastiontech.org
+- Service hours: Mon-Sun, 9:00 AM-5:00 PM
+- Privacy: https://bastiontech.org/bastionprivacy.html
+- Terms: https://bastiontech.org/termsandconditions.html
+
+## Optional
+- SendMeStars - https://sendmestars.com
+- AskFaithBot - https://askfaithbot.com
+- Bastion X-Ray - https://github.com/noeljbass/BastionXRay
+- Bastion Web Blocker - https://chromewebstore.google.com/detail/bastion-web-blocker/dobgcefbomojojllhkmjpanicpfmmcdo

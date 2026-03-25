@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Oviedo Web Design & Local SEO for Christian & Family Businesses | BastionTech</title>
+  <meta name="description"
+    content="BastionTech is a Christian web design company in Oviedo, FL. We build fast, conversion-focused websites and provide local SEO for small businesses across Central Florida.">
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#48668b',
+            sand: '#cfab6e',
+            coal: '#0b0f14',
+            ink: '#0f172a',
+          },
+          boxShadow: {
+            glow: '0 10px 30px rgba(72,102,139,.3)'
+          },
+          fontFamily: {
+            display: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="llm-manifest" href="/LLMs.txt" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Multi‑layer background scroll design */
+    :root {
+      --scroll: 0;
+    }
+
+    .parallax {
+      perspective: 1px;
+      transform-style: preserve-3d;
+      overflow-x: hidden;
+    }
+
+    .parallax-layer {
+      position: fixed;
+      inset: 0;
+      z-index: -10;
+      pointer-events: none;
+      transition: opacity .4s ease;
+      will-change: transform;
+    }
+
+    .parallax-layer[data-speed] {
+      transform: translate3d(0, calc(var(--scroll) * var(--speed, .1)), 0);
+    }
+
+    /* Decorative blobs + grid */
+    .blob {
+      filter: blur(40px) saturate(120%);
+      opacity: .35;
+      mix-blend-mode: screen;
+    }
+
+    .noise:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: .05;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><defs><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter></defs><rect width="100%" height="100%" filter="url(%23n)" opacity="0.4"></rect></svg>');
+      background-size: 300px 300px;
+    }
+
+    .grid-fade {
+      background-image: linear-gradient(rgba(255, 255, 255, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .07) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(circle at 50% 30%, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 70%);
+    }
+
+    /* Smooth section reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all .6s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: none;
+    }
+
+    @keyframes floatyA {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-10px) rotate(-0.4deg);
+      }
+
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+    }
+
+    @keyframes floatyB {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-6px) rotate(0.4deg);
+      }
+
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+    }
+
+    .animate-floaty-a {
+      animation: floatyA 7.5s ease-in-out infinite;
+    }
+
+    .animate-floaty-b {
+      animation: floatyB 10s ease-in-out infinite;
+      animation-delay: .8s;
+    }
+  </style>
+  <!-- ===== SEO Essentials ===== -->
+  <link rel="canonical" href="https://bastiontech.org/" />
+  <link rel="alternate" hreflang="en-US" href="https://bastiontech.org/" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta http-equiv="X-Robots-Tag"
+    content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="theme-color" content="#48668b" />
+  <meta property="og:locale" content="en_US">
+
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BastionTech" />
+  <meta property="og:title"
+    content="Oviedo Web Design & Local SEO for faith-based and family-owned small businesses | BastionTech" />
+  <meta property="og:description"
+    content="BastionTech is a Christian web design company in Oviedo, FL, serving Central Florida small businesses with modern websites and local SEO services that grow visibility and trust." />
+  <meta property="og:url" content="https://bastiontech.org/" />
+  <meta property="og:image" content="https://bastiontech.org/bastionbanner.png" />
+  <meta property="og:image:secure_url" content="https://bastiontech.org/bastionbanner.png">
+  <meta property="og:image:alt" content="BastionTech — Web Design & SEO in Oviedo, FL" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:updated_time" content="2025-10-02T12:00:00-04:00" />
+
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="Oviedo Web Design & Local SEO for faith-based and family-owned small businesses | BastionTech" />
+  <meta name="twitter:description"
+    content="BastionTech is a Christian web design company in Oviedo, FL. We build fast, conversion-focused websites and provide local SEO for small businesses across Central Florida.">
+  <meta name="twitter:image" content="https://bastiontech.org/bastionbanner.png" />
+
+  <!-- Favicon / App Icons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+  <link rel="manifest" href="/site.webmanifest" crossorigin="anonymous" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- Sitemap hint -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+  <!-- Banner Preload -->
+  <link rel="preload" as="image" href="/bastionbanner.png">
+
+  <!-- Single gtag loader -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    // GA4 properties (both are fine)
+    gtag('config', 'G-S2LKPB1LH4');
+    gtag('config', 'G-DXSRZGDZK1');
+
+    // Google Ads base tag (this is the one Ads looks for)
+    //gtag('config', 'AW-XXXXXXXXX');
+  </script>
+
+  <!-- ===== JSON-LD (consolidated): WebSite + Business + Services ===== -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://bastiontech.org/#website",
+      "name": "BastionTech",
+      "url": "https://bastiontech.org/",
+      "inLanguage": "en-US",
+      "description": "Web design and local SEO for Christian & family businesses in Oviedo, FL.",
+      "publisher": { "@id": "https://bastiontech.org/#business" },
+      "sameAs": [
+        "https://bastiontech.org/",
+        "https://www.facebook.com/bastiontechservices/",
+        "https://www.linkedin.com/company/bastion-technology-solutions/"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://bastiontech.org/#business",
+      "name": "BastionTech",
+      "legalName": "BastionTech LLC",
+      "url": "https://bastiontech.org/",
+      "image": "https://bastiontech.org/bastionbanner.png",
+      "telephone": "+1-407-796-2684",
+      "description": "Web design and local SEO for Christian & family businesses.",
+      "areaServed": [
+        { "@type": "City", "name": "Oviedo" },
+        { "@type": "AdministrativeArea", "name": "Seminole County" },
+        { "@type": "AdministrativeArea", "name": "Central Florida" }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oviedo",
+        "addressRegion": "FL",
+        "postalCode": "32765",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }],
+      "priceRange": "$$",
+      "sameAs": [
+        "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=BASTIONTECH%20L250004621540&aggregateId=flal-l25000462154-dda076fc-6d37-494a-93ec-522b714a9392&searchTerm=BASTIONTECH%20LLC&listNameOrder=BASTIONTECH%20L250004621540",
+        "https://bastiontech.org/",
+        "https://www.facebook.com/bastiontechservices",
+        "https://x.com/bastiont3ch",
+        "https://www.linkedin.com/company/bastion-technology-solutions/",
+        "https://g.page/r/CU7XqcTQsI9OEBM/review"
+      ],
+      "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Web Design & SEO Packages",
+  "itemListElement": [
+    { "@type": "Offer", "name": "Essential Website", "price": "300", "priceCurrency": "USD", "category": "WebDesign" },
+    { "@type": "Offer", "name": "Professional Website", "price": "450", "priceCurrency": "USD", "category": "WebDesign" },
+    { "@type": "Offer", "name": "Custom Website (scope-based)", "price": "600", "priceCurrency": "USD", "category": "WebDesign" },
+
+    { "@type": "Offer", "name": "Site Care (Hosting & Maintenance)", "price": "100", "priceCurrency": "USD", "category": "Hosting", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "100", "priceCurrency": "USD", "unitText": "MONTH" } },
+
+    { "@type": "Offer", "name": "Basic SEO", "price": "1500", "priceCurrency": "USD", "category": "SEO", "availability": "https://schema.org/InStock", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "1500", "priceCurrency": "USD", "unitText": "MONTH" } },
+    { "@type": "Offer", "name": "Advanced SEO", "price": "3000", "priceCurrency": "USD", "category": "SEO", "availability": "https://schema.org/InStock", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "3000", "priceCurrency": "USD", "unitText": "MONTH" } }
+  ]
+}
+
+    },
+    {
+  "@type": "Service",
+  "@id": "https://bastiontech.org/#seo",
+  "serviceType": "Search Engine Optimization",
+  "name": "Local SEO & Google Business Profile Optimization",
+  "provider": { "@id": "https://bastiontech.org/#business" },
+  "areaServed": "US-FL",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Basic SEO",
+        "price": "1500",
+        "priceCurrency": "USD",
+        "url": "https://bastiontech.org/#packages-seo",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "1500",
+          "priceCurrency": "USD",
+          "unitText": "MONTH"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Advanced SEO",
+        "price": "3000",
+        "priceCurrency": "USD",
+        "url": "https://bastiontech.org/#packages-seo",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "3000",
+          "priceCurrency": "USD",
+          "unitText": "MONTH"
+        }
+      }
+    ]
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Guarantee",
+      "value": "2× ROI Guarantee: If verified organic/GBP revenue over a rolling 90-day period is < 2× the monthly fee, my fee drops to 50% of that verified revenue until ROI ≥ 2×.",
+      "valueReference": "https://bastiontech.org/#packages-seo"
+    }
+  ],
+  "description": "Technical fixes, on-page optimization, local citations, Google Business Profile posts, review generation, and monthly content."
+}
+
+  ]
+}
+</script>
+
+
+</head>
+
+<body class="bg-ink text-white antialiased selection:bg-primary/30 selection:text-white">
+
+  <!-- Parallax multi-layer background -->
+  <div class="parallax">
+    <div class="parallax-layer" data-speed="-0.06"
+      style="--speed:-0.06; background: radial-gradient(60% 60% at 20% 10%, rgba(72,102,139,.45), rgba(11,15,20,0) 60%)">
+    </div>
+    <div class="parallax-layer grid-fade" data-speed="-0.03" style="--speed:-0.03"></div>
+    <div class="parallax-layer blob" data-speed="-0.09"
+      style="--speed:-0.09; background: radial-gradient(35rem 35rem at 80% 20%, rgba(207,171,110,.55), rgba(11,15,20,0) 60%)">
+    </div>
+    <div class="parallax-layer blob" data-speed="-0.12"
+      style="--speed:-0.12; background: radial-gradient(28rem 28rem at 10% 70%, rgba(72,102,139,.55), rgba(11,15,20,0) 60%)">
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-ink text-white border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="inline-flex items-center gap-2">
+        <img src="/img/BastionLogo.png" alt="BastionTech" class="h-9 w-auto" />
+        <span class="sr-only">BastionTech</span>
+      </a>
+
+      <!-- Desktop nav (click-to-open dropdowns) -->
+      <nav class="hidden sm:flex items-center gap-8 text-sm">
+
+        <!-- Services dropdown -->
+        <div class="relative">
+          <button type="button" class="inline-flex items-center gap-1 hover:text-sand" aria-haspopup="true"
+            aria-expanded="false" aria-controls="menu-services" data-dropdown-btn="services">
+            Services
+            <svg class="h-4 w-4 mt-px" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 111.02 1.1l-4.23 3.825a.75.75 0 01-1.02 0L5.25 8.33a.75.75 0 01-.02-1.12z" />
+            </svg>
+          </button>
+
+          <div id="menu-services" role="menu" aria-label="Services" class="absolute left-0 mt-2 w-56 rounded-xl border border-white/10 bg-ink shadow-lg p-2
+                hidden opacity-0 translate-y-1 transition ease-out duration-150" data-dropdown-panel="services"
+            tabindex="-1">
+            <a href="/#packages-web" class="block px-3 py-2 rounded-lg hover:bg-white/10" role="menuitem">Web Design</a>
+            <a href="/seo.html" class="block px-3 py-2 rounded-lg hover:bg-white/10" role="menuitem">Local SEO</a>
+            <a href="/#site-care" class="block px-3 py-2 rounded-lg hover:bg-white/10" role="menuitem">Hosting &
+              Maintenance</a>
+          </div>
+        </div>
+
+        <!-- Resources dropdown -->
+        <div class="relative">
+          <button type="button" class="inline-flex items-center gap-1 hover:text-sand" aria-haspopup="true"
+            aria-expanded="false" aria-controls="menu-resources" data-dropdown-btn="resources">
+            Resources
+            <svg class="h-4 w-4 mt-px" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 111.02 1.1l-4.23 3.825a.75.75 0 01-1.02 0L5.25 8.33a.75.75 0 01-.02-1.12z" />
+            </svg>
+          </button>
+
+          <div id="menu-resources" role="menu" aria-label="Resources" class="absolute left-0 mt-2 w-56 rounded-xl border border-white/10 bg-ink shadow-lg p-2
+                hidden opacity-0 translate-y-1 transition ease-out duration-150" data-dropdown-panel="resources"
+            tabindex="-1">
+            <a href="/#work" class="block px-3 py-2 rounded-lg hover:bg-white/10">Case Studies</a>
+            <a href="/marketingquiz.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Marketing Quiz</a>
+            <a href="/blog/blog.html" class="block px-3 py-2 rounded-lg hover:bg-white/10" role="menuitem">Blog</a>
+            <a href="/#faq" class="block px-3 py-2 rounded-lg hover:bg-white/10" role="menuitem">FAQ</a>
+            <a href="/#contact" class="block px-3 py-2 rounded-lg hover:bg-white/10" role="menuitem">Contact</a>
+          </div>
+        </div>
+
+      </nav>
+
+
+      <!-- Desktop CTA -->
+      <a href="/#contact"
+        class="hidden sm:inline-flex items-center gap-2 text-sm px-3 py-2 rounded-xl bg-primary hover:bg-primary/90 shadow-glow">
+        Get a Quote
+      </a>
+
+      <!-- Mobile: hamburger + CTA -->
+      <div class="sm:hidden flex items-center gap-2">
+        <!-- <a href="/#contact" class="inline-flex items-center text-sm px-3 py-2 rounded-xl bg-primary hover:bg-primary/90">
+        Get a Quote
+      </a> -->
+        <button id="menuBtn"
+          class="inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white/20 hover:bg-white/10"
+          aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <!-- Hamburger -->
+          <svg id="iconOpen" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <!-- X -->
+          <svg id="iconClose" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu panel -->
+    <div id="mobileMenu" class="sm:hidden hidden border-t border-white/10 bg-ink">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a class="block px-2 py-2 rounded hover:bg-white/10" href="/#work">Case Studies</a>
+          </li>
+
+          <!-- Services disclosure -->
+          <li class="border-t border-white/10 pt-2">
+            <button class="w-full flex items-center justify-between px-2 py-2 rounded hover:bg-white/10"
+              aria-expanded="false" data-disclosure="services">
+              <span>Services</span>
+              <svg class="h-4 w-4 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 111.02 1.1l-4.23 3.825a.75.75 0 01-1.02 0L5.25 8.33a.75.75 0 01-.02-1.12z" />
+              </svg>
+            </button>
+            <ul class="mt-1 ml-2 hidden" data-disclosure-panel="services">
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/#packages-web">Web Design</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/#packages-seo">Local SEO</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/#portfolio">Portfolio</a></li>
+            </ul>
+          </li>
+
+          <!-- Resources disclosure -->
+          <li class="border-t border-white/10 pt-2">
+            <button class="w-full flex items-center justify-between px-2 py-2 rounded hover:bg-white/10"
+              aria-expanded="false" data-disclosure="resources">
+              <span>Resources</span>
+              <svg class="h-4 w-4 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.585l3.71-3.354a.75.75 0 111.02 1.1l-4.23 3.825a.75.75 0 01-1.02 0L5.25 8.33a.75.75 0 01-.02-1.12z" />
+              </svg>
+            </button>
+            <ul class="mt-1 ml-2 hidden" data-disclosure-panel="resources">
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/#work">Case Studies</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/marketingquiz.html">Marketing Quiz</a>
+              </li>
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/blog/blog.html">Blog</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/#faq">FAQ</a></li>
+              <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="/#contact">Contact</a></li>
+            </ul>
+          </li>
+
+          <li class="border-t border-white/10 pt-2">
+            <a class="block px-2 py-2 rounded hover:bg-white/10" href="/#contact">Contact</a>
+          </li>
+        </ul>
+
+        <div class="mt-3">
+          <a href="/#contact"
+            class="block text-center w-full rounded-xl bg-primary hover:bg-primary/90 px-4 py-3 font-semibold">
+            Get a Quote
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Hero -->
+  <section class="relative pt-36 pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7 reveal">
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
+            <span class="text-sand">Websites</span> & <span class="text-primary">SEO</span> for Christian Small
+            Businesses in Oviedo, FL.
+          </h1>
+          <p class="mt-5 text-white/70 max-w-2xl">
+            Need a website and better Google rankings? We help Christian and family businesses in Oviedo and Central
+            Florida with
+            modern web design and local SEO that builds visibility and trust.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#packages-web"
+              class="px-5 py-3 rounded-xl bg-primary hover:bg-primary/90 font-semibold shadow-glow">View Web Design
+              Packages</a>
+            <a href="#packages-seo" class="px-5 py-3 rounded-xl border border-white/10 hover:border-white/20">Explore
+              SEO Plans</a>
+            <div class="mt-3 text-xs text-white/60">
+              Hosting & maintenance available for <span class="font-semibold text-white/80">$100/mo</span>.
+              <a href="#site-care" class="underline hover:text-white">Learn more</a>
+            </div>
+          </div>
+          <div class="mt-8 flex items-center gap-6 text-xs text-white/60">
+            <div class="flex items-center gap-2"><span class="size-2 rounded-full bg-emerald-400"></span> Fast,
+              Google-friendly websites</div>
+            <div class="flex items-center gap-2"><span class="size-2 rounded-full bg-emerald-400"></span> Works great on
+              phones & tablets</div>
+            <div class="flex items-center gap-2"><span class="size-2 rounded-full bg-emerald-400"></span> Hosting,
+              security, and site care included</div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 reveal lg:justify-self-end">
+          <div class="relative w-full max-w-md">
+            <div
+              class="absolute -inset-1 rounded-2xl bg-gradient-to-br from-primary/40 via-sand/40 to-transparent blur-xl">
+            </div>
+
+            <div class="relative group rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6">
+              <div
+                class="relative aspect-[4/3] rounded-xl bg-gradient-to-tr from-primary/30 to-sand/30 overflow-hidden">
+
+                <!-- BACK LAYER: iMac (left) -->
+                <img src="img/imac.webp" alt="iMac mockup" fetchpriority="high" class="absolute left-3 sm:left-4 bottom-0
+                        w-52 sm:w-64 md:w-72 lg:w-80
+                        opacity-90 z-0 pointer-events-none
+                        drop-shadow-[0_12px_35px_rgba(0,0,0,0.35)]
+                        animate-floaty-b transition-transform duration-300
+                        group-hover:-translate-y-1" loading="lazy" />
+
+                <!-- FRONT LAYER: Taino portrait (right, slightly pulled in from edge) -->
+                <img src="img/taino-portrait.webp" alt="Taino Athlete mockup" fetchpriority="high" class="absolute right-0 sm:right-2 md:right-4 bottom-2
+                w-40 sm:w-48 md:w-56 lg:w-64
+                z-10 pointer-events-none
+                drop-shadow-[0_12px_35px_rgba(0,0,0,0.45)]
+                animate-floaty-a transition-transform duration-300
+                group-hover:-translate-y-1" loading="lazy" />
+              </div>
+
+              <p class="mt-4 text-sm text-white/70">
+                Custom design • Fast service • Built to rank higher on Google
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work / Portfolio Preview -->
+  <section id="work" class="relative py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center">
+        <h2 class="text-3xl font-extrabold tracking-tight">Web Design & SEO for Christian and Family Businesses</h2>
+        <p class="mt-2 text-white/70 max-w-2xl mx-auto">A few examples of our recent work. Modern, conversion-focused
+          sites that help local Christian and family-owned companies
+          grow online.</p>
+      </div>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Card 1 -->
+        <div class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <!-- Image window -->
+          <div
+            class="aspect-video bg-gradient-to-tr from-white/10 to-transparent group-hover:to-white/20 transition relative">
+            <img src="img/SEO testimonies.webp"
+              alt="Website keyword optimization and local SEO for Inner Balance Chiropractic"
+              class="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-300 group-hover:opacity-90"
+              loading="lazy" />
+          </div>
+
+          <!-- Text content -->
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-semibold text-lg">Chiropractor Case Studies</h3>
+            <p class="mt-2 text-sm text-white/70">
+              We've worked with a few Chiropractors recently on their local SEO. In both cases, we saw a radical
+              increase in qualified bookings due to our keyword research and adjustments to their websites and Google
+              Business Profiles.
+            </p><br>
+            <div class="flex gap-2">
+              <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10"><a
+                  href="blog/inner-balance-chiropractic-local-seo-case-study.html" target="_blank"> Read Inner Balance
+                  Study</a></span>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+          <!-- Image window -->
+          <div class="aspect-video relative overflow-hidden">
+            <img src="img/GCFC testimony.webp"
+              alt="Event registration and mobile-friendly website design for Gulf Coast Family Camp, developed by BastionTech"
+              class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              loading="lazy" />
+            <div
+              class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition">
+            </div>
+          </div>
+
+          <!-- Text content -->
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-semibold text-lg">Custom Portal Case Study</h3>
+            <p class="mt-2 text-sm text-white/70">
+              In this emergency project, we were asked to build out a brand new website for the Gulf Coast Family Camp.
+              We built it fast with admin tools, multi-product payment portals, heavy SEO, and even a podcast launch. We
+              got news from several families that they found our Christian camp through our optimizations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Magnet Banner (full width) -->
+  <section id="lead-magnet" class="relative py-10 sm:py-12">
+    <!-- soft gradient glow that bleeds edge-to-edge -->
+    <div
+      class="absolute inset-0 -z-10 bg-gradient-to-br from-primary/30 via-sand/35 to-transparent blur-2xl opacity-80">
+    </div>
+
+    <!-- banner shell -->
+    <div class="relative border-y border-white/10 bg-white/5 backdrop-blur">
+      <!-- inner content container -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 py-8">
+          <!-- Text -->
+          <div class="max-w-2xl">
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              Get our FREE Marketing Research & Strategy Guide
+            </h2>
+            <p class="mt-2 text-white/70">
+              Sign up and get the guide instantly, then stay updated each month with helpful news and special offers.
+            </p>
+          </div>
+
+          <!-- Form -->
+          <!-- Form (Mailchimp-wired, no visual changes) -->
+          <form
+            action="https://bastiontech.us22.list-manage.com/subscribe/post?u=5635c09a3332ef2cdd2c0b697&amp;id=4a1ef11af2&amp;f_id=0048dbe1f0"
+            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+            class="validate w-full md:w-auto" target="_blank" novalidate>
+            <div class="flex flex-col sm:flex-row gap-3 sm:items-stretch">
+              <label class="sr-only" for="mce-EMAIL">Email</label>
+              <input id="mce-EMAIL" name="EMAIL" type="email" required placeholder="you@example.com"
+                class="min-w-[260px] sm:min-w-[320px] rounded-xl bg-white text-ink border border-white/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50" />
+              <button class="rounded-xl bg-primary hover:bg-primary/90 px-5 py-3 font-semibold shadow-glow"
+                type="submit" name="subscribe" id="mc-embedded-subscribe">
+                Send Me the Guide
+              </button>
+            </div>
+
+            <!-- Responses (kept hidden unless MC toggles them) -->
+            <div id="mce-responses" class="clear foot">
+              <div class="response hidden" id="mce-error-response"></div>
+              <div class="response hidden" id="mce-success-response"></div>
+            </div>
+
+            <!-- Honeypot (spam trap—do not remove) -->
+            <div aria-hidden="true" style="position:absolute; left:-5000px;">
+              <input type="text" name="b_5635c09a3332ef2cdd2c0b697_4a1ef11af2" tabindex="-1" value="">
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="relative py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center">
+        <h2 class="text-3xl font-extrabold tracking-tight">What Clients Say</h2>
+        <p class="mt-2 text-white/70 max-w-2xl mx-auto">Real Google reviews from businesses we’ve served. We specialize
+          in web design for family businesses and ministries, combining professional visuals with message-driven
+          marketing.</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Review 1 -->
+        <article class="reveal rounded-2xl border border-white/10 bg-white/5 p-6">
+          <header class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold">Dr. Sophia Pierce</h3>
+              <p><a href="https://innerbalancechiros.com" target="_blank"><span class="text-sand">Inner Balance
+                    Chiropractic & Wellness</span></a></p>
+            </div>
+          </header>
+          <div class="mt-3 flex items-center gap-1 text-sand">
+            <span aria-hidden="true">★★★★★</span>
+            <span class="sr-only">5 out of 5</span>
+          </div>
+          <p class="mt-3 text-sm text-white/80">
+            “BastionTech has been absolutely incredible to work with! They completely transformed our website design and
+            performance, making it more professional, user-friendly, and optimized for search engines. Their SEO
+            strategy has already started bringing us more organic traffic and higher rankings on Google, and we’ve
+            noticed a big difference in how easily new clients can find us online.
+
+            The team is knowledgeable, responsive, and takes the time to explain everything in a way that makes sense.
+            It’s clear they truly care about helping businesses grow through effective web design, SEO, and digital
+            marketing. If you’re looking for a company that delivers real results and top-notch customer service, I
+            highly recommend BastionTech!”
+          </p>
+          <br>
+          <div class="flex gap-2">
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Website SEO</span>
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local SEO</span>
+          </div>
+        </article>
+        <!-- Review 2 -->
+        <article class="reveal rounded-2xl border border-white/10 bg-white/5 p-6">
+          <header class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold">Dr. Taylor Glasco</h3>
+              <p><a href="https://nurturingnestchiropractic.com" target="_blank"><span class="text-sand">Nurturing Nest
+                    Chiropractic</span></a></p>
+            </div>
+          </header>
+          <div class="mt-3 flex items-center gap-1 text-sand">
+            <span aria-hidden="true">★★★★★</span>
+            <span class="sr-only">5 out of 5</span>
+          </div>
+          <p class="mt-3 text-sm text-white/80">
+            “Noel has been great to work with!! He has overhauled our marketing strategy and website and we’ve seen a
+            huge influx in new clients! If you are small business looking for support to optimize your google presence,
+            website, and overall business Noel is your man! His communication is quick and reliable. Worth every penny!”
+          </p>
+          <br>
+          <div class="flex gap-2">
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Website SEO</span>
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local SEO</span>
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Newsletter</span>
+          </div>
+        </article>
+        <!-- Review 3 -->
+        <!-- <article class="reveal rounded-2xl border border-white/10 bg-white/5 p-6">
+        <header class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-semibold">Mareta Benjamin</h3>
+          </div>
+        </header>
+        <div class="mt-3 flex items-center gap-1 text-sand">
+          <span aria-hidden="true">★★★★★</span>
+          <span class="sr-only">5 out of 5</span>
+        </div>
+        <p class="mt-3 text-sm text-white/80">
+          “Noel Bass is a wonderful man of God, husband, dad and an incredible Website Builder. It was truly impressive to view the way he built my website and it was extremely impressive to see the way he created a graphic logo for my business. I can visually see an abundance of business oriented people seeking out Noel Bass to build their websites! If you want an eye catching website and an awesome business, then you definitely want to ask Noel Bass to be your business builder!”
+        </p>
+        <br>
+        <div class="flex gap-2">
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Website</span>
+                <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Branding</span>
+              </div>
+      </article> -->
+
+        <!-- Review 4 -->
+        <article class="reveal rounded-2xl border border-white/10 bg-white/5 p-6">
+          <header class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold">Juan Alvarez</h3>
+              <p><a href="https://shinybluepool.com" target="_blank"><span class="text-sand">Shiny Blue Pool</span></a>
+              </p>
+            </div>
+
+          </header>
+          <div class="mt-3 flex items-center gap-1 text-sand">
+            <span aria-hidden="true">★★★★★</span>
+            <span class="sr-only">5 out of 5</span>
+          </div>
+          <p class="mt-3 text-sm text-white/80">
+            “Noel is great. He did our website. He is very knowledgeable and responsive… Highly recommend him.”
+          </p>
+          <br>
+          <div class="flex gap-2">
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Website</span>
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Local Ads</span>
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">GBP</span>
+          </div>
+        </article>
+
+        <!-- Review 5 -->
+        <article class="reveal rounded-2xl border border-white/10 bg-white/5 p-6">
+          <header class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold">Valentin Vega</h3>
+              <p><a href="https://tainoathlete.com" target="_blank"><span class="text-sand">Taino Athlete</span></a></p>
+            </div>
+          </header>
+          <div class="mt-3 flex items-center gap-1 text-sand">
+            <span aria-hidden="true">★★★★★</span>
+            <span class="sr-only">5 out of 5</span>
+          </div>
+          <p class="mt-3 text-sm text-white/80">
+            “Working with Noel has been incredible… He knows what he's doing, and I recommend him 1000%.”
+          </p>
+          <br>
+          <div class="flex gap-2">
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Website</span>
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Lead Magnets</span>
+          </div>
+        </article>
+
+        <!-- Review 6 -->
+        <article class="reveal rounded-2xl border border-white/10 bg-white/5 p-6">
+          <header class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold">Hartman Family</h3>
+              <p><a href="https://gulfcoastfamilycamp.com" target="_blank"><span class="text-sand">Gulf Coast Family
+                    Camp</span></a></p>
+            </div>
+          </header>
+          <div class="mt-3 flex items-center gap-1 text-sand">
+            <span aria-hidden="true">★★★★★</span>
+            <span class="sr-only">5 out of 5</span>
+          </div>
+          <p class="mt-3 text-sm text-white/80">
+            “We had an amazing experience with Noel! He took a very stressful situation and jumped on it right away
+            solving a major crisis by the end of the day. He was extremely easy to communicate with and got back to us
+            on every question we had. Such a rare quality to find nowadays. I love that it's an American based company
+            that you actually get to talk with the owner. highly recommend!!”
+          </p>
+          <br>
+          <div class="flex gap-2">
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Website</span>
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">SEO</span>
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Custom Portal</span>
+          </div>
+        </article>
+
+        <!-- Review 5 -->
+        <article class="reveal rounded-2xl border border-white/10 bg-white/5 p-6">
+          <header class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold">Samantha Ferguson</h3>
+              <p><a href="https://fergusonfamilydanes.com" target="_blank"><span class="text-sand">Ferguson Family
+                    Danes</span></a></p>
+              <p><a href="https://notcontentcoaching.com" target="_blank"><span class="text-sand">Not Content
+                    Coaching</span></a></p>
+              <p><a href="https://joyfullypresent.com" target="_blank"><span class="text-sand">Joyfully
+                    Present</span></a></p>
+
+            </div>
+          </header>
+          <div class="mt-3 flex items-center gap-1 text-sand">
+            <span aria-hidden="true">★★★★★</span>
+            <span class="sr-only">5 out of 5</span>
+          </div>
+          <p class="mt-3 text-sm text-white/80">
+            “Bastion Technology services has been absolutely amazing to work with. They are quick to handle any issues
+            that we are having with our website, provide outstanding maintenance and continual support to help us grow
+            our platform. We credit our growing business to their expertise and knowledge of the worldwide web! We would
+            highly recommend them!”
+          </p>
+          <br>
+          <div class="flex gap-2">
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Website</span>
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">SEO</span>
+            <span class="px-2 py-0.5 rounded bg-white/10 border border-white/10">Branding</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web Design Packages -->
+  <section id="packages-web" class="relative py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-extrabold tracking-tight">Web Design Packages</h2>
+        <p class="mt-2 text-white/70">Explore our web design packages for small businesses. Fast, affordable, and
+          designed to convert. Whether you need a
+          starter site or a full redesign, we handle everything from concept to launch.</p>
+      </div>
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <!-- Essential -->
+        <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 flex flex-col">
+          <h3 class="font-semibold text-lg">Essential</h3>
+          <p class="text-sm text-white/60">For simple, polished brochure sites.</p>
+          <div class="mt-4 text-3xl font-extrabold">$300</div>
+          <ul class="mt-4 text-sm text-white/80 space-y-2">
+            <li>Up to 5 pages</li>
+            <li>Responsive, mobile-friendly</li>
+            <li>Basic on‑page SEO</li>
+            <li>1 round of revisions</li>
+            <li>Contact form & analytics</li>
+          </ul>
+          <br>
+          <p class="mt-4 text-xs text-white/60">
+            <span class="font-semibold text-white/80">Requires Site Care</span>: hosting & maintenance $100/mo.
+            <a href="#site-care" class="underline hover:text-white">What’s included?</a>
+          </p>
+          <a href="#contact"
+            class="mt-6 inline-flex justify-center rounded-xl border border-white/10 px-4 py-2 hover:border-white/20">Get
+            Started</a>
+        </div>
+        <!-- Growth (Featured) -->
+        <div class="reveal relative rounded-2xl border border-primary/30 bg-white/10 p-6 shadow-glow flex flex-col">
+          <div
+            class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] tracking-wider uppercase px-3 py-1 rounded-full bg-primary text-white">
+            Most Popular</div>
+          <h3 class="font-semibold text-lg">Professional</h3>
+          <p class="text-sm text-white/60">Best for service brands ready to scale.</p>
+          <div class="mt-4 text-3xl font-extrabold">$450</div>
+          <ul class="mt-4 text-sm text-white/80 space-y-2">
+            <li>Up to 12 pages</li>
+            <li>Custom components</li>
+            <li>Basic Payment Integration</li>
+            <li>Google-ready SEO setup</li>
+            <li>2 rounds of revisions</li>
+          </ul>
+          <br>
+          <p class="mt-4 text-xs text-white/60">
+            <span class="font-semibold text-white/80">Requires Site Care</span>: hosting & maintenance $100/mo.
+            <a href="#site-care" class="underline hover:text-white">What’s included?</a>
+          </p>
+          <a href="#contact"
+            class="mt-6 inline-flex justify-center rounded-xl bg-primary px-4 py-2 hover:bg-primary/90">Build This</a>
+        </div>
+        <!-- Advanced -->
+        <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 flex flex-col">
+          <h3 class="font-semibold text-lg">Custom</h3>
+          <p class="text-sm text-white/60">Complex sites, integrations, or custom UX.</p>
+          <div class="mt-4 text-3xl font-extrabold">$600+</div>
+          <ul class="mt-4 text-sm text-white/80 space-y-2">
+            <li>Unlimited pages (scope‑based)</li>
+            <li>Advanced Conversion-first design</li>
+            <li>Custom-built Store/Admin Components</li>
+            <li>3 months of SEO support and backlinks</li>
+            <li>Priority support</li>
+          </ul>
+          <br>
+          <p class="mt-4 text-xs text-white/60">
+            <span class="font-semibold text-white/80">Requires Site Care</span>: hosting & maintenance $100/mo.
+            <a href="#site-care" class="underline hover:text-white">What’s included?</a>
+          </p>
+
+          <a href="#contact"
+            class="mt-6 inline-flex justify-center rounded-xl border border-white/10 px-4 py-2 hover:border-white/20">Request
+            Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Packages -->
+  <section id="packages-seo" class="relative py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-extrabold tracking-tight">SEO Packages</h2>
+        <p class="mt-2 text-white/70">
+          As an Oviedo SEO company, we provide local SEO services that help nearby businesses rank higher on Google and
+          attract
+          more calls.
+        </p>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-2 gap-6">
+        <!-- Essentials -->
+        <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 flex flex-col">
+          <h3 class="font-semibold text-lg">Basic SEO</h3>
+          <p class="text-sm text-white/60">Fix the basics and start ranking higher.</p>
+          <div class="mt-4 text-3xl font-extrabold">$1500/mo</div>
+          <ul class="mt-4 text-sm text-white/80 space-y-2">
+            <li>Site audit & key fixes</li>
+            <li>On-page keyword optimization</li>
+            <li>Search-friendly sitemap setup</li>
+            <li>1 new content piece a month</li>
+          </ul>
+          <a href="#contact"
+            class="mt-6 inline-flex justify-center rounded-xl border border-white/10 px-4 py-2 hover:border-white/20">
+            Start SEO
+          </a>
+        </div>
+
+        <!-- Local SEO Boost (Featured) -->
+        <div class="reveal relative rounded-2xl border border-primary/30 bg-white/10 p-6 shadow-glow flex flex-col">
+          <div
+            class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] tracking-wider uppercase px-3 py-1 rounded-full bg-primary text-white">
+            Best Value
+          </div>
+          <h3 class="font-semibold text-lg">Advanced SEO</h3>
+          <p class="text-sm text-white/60">Bring in more calls, clicks, and foot traffic.</p>
+          <div class="mt-4 text-3xl font-extrabold">$3,000/mo</div>
+          <ul class="mt-4 text-sm text-white/80 space-y-2">
+            <li>Google Business Profile optimization & weekly posts</li>
+            <li>Fix & build local directory listings</li>
+            <li>Automated review requests & reputation growth</li>
+            <li>2 new content pieces each month</li>
+          </ul>
+          <a href="#contact"
+            class="mt-6 inline-flex justify-center rounded-xl bg-primary px-4 py-2 hover:bg-primary/90">
+            Get Started
+          </a>
+        </div>
+      </div>
+      <!-- ROI Guarantee -->
+      <div id="roi-guarantee"
+        class="mt-12 reveal rounded-2xl border border-emerald-400/30 bg-emerald-900/10 p-6 backdrop-blur">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <div
+              class="inline-flex items-center gap-2 rounded-full border border-emerald-400/40 px-3 py-1 text-xs tracking-wide text-emerald-200">
+              <span class="font-semibold">2× ROI Guarantee</span>
+            </div>
+            <h3 class="mt-3 text-xl font-extrabold tracking-tight">If you don’t at least double your money, I lower my
+              fee.
+            </h3>
+            <p class="mt-2 text-white/80 text-sm max-w-3xl">
+              I guarantee a <strong>minimum 2× return on your SEO investment</strong>. If in a rolling 90-day period you
+              are
+              not at least bringing in
+              <strong>2× what you pay me</strong> from SEO/GBP results, I will <strong>reduce my fee to 50% of the
+                verified
+                revenue I bring in</strong>
+              until you’re at or above 2×. Simple and fair.
+            </p>
+          </div>
+          <a href="#contact"
+            class="shrink-0 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 font-semibold hover:bg-primary/90">
+            Talk About the Guarantee
+          </a>
+        </div>
+
+        <div class="mt-4 grid md:grid-cols-3 gap-4 text-sm text-white/80">
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">How we count revenue</div>
+            <ul class="mt-2 list-disc pl-5 space-y-1">
+              <li>New clients attributable to <strong>Organic Search & Google Business Profile</strong></li>
+              <li>Attribution via call tracking, form UTM/source, and booking tags</li>
+              <li>Revenue = verified first transaction(s) per new client</li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">Timeframe & baseline</div>
+            <ul class="mt-2 list-disc pl-5 space-y-1">
+              <li><strong>Rolling 90-day</strong> ROI check after a 30-day ramp</li>
+              <li>Baseline set in the first 14 days (pre-SEO performance)</li>
+              <li>Excludes paid ads, referrals, and non-SEO channels</li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">Your part</div>
+            <ul class="mt-2 list-disc pl-5 space-y-1">
+              <li>Implement site changes we deliver</li>
+              <li>Answer/return calls, keep hours accurate</li>
+              <li>Request & publish reviews; maintain service quality</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="mt-4 text-xs text-white/60">
+          Notes: “Verified revenue” is documented by agreed tracking (call recordings/IDs, forms with source/UTM,
+          booking
+          logs). Seasonality, closures, or
+          major market disruptions may extend the evaluation window by mutual agreement. We’ll review metrics together
+          monthly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Site Care -->
+  <section id="site-care" class="relative py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight">Site Care — $100/mo</h2>
+            <p class="mt-2 text-white/70 max-w-2xl">
+              Worry-free hosting and management for your website. We keep everything fast, secure, and up to date so you
+              can focus on your business.
+            </p>
+          </div>
+          <div class="shrink-0">
+            <a href="https://buy.stripe.com/00w7sMdjs7Cj3js4PhcV20j"
+              class="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 font-semibold hover:bg-primary/90"
+              target="_blank">
+              Add Site Care
+            </a>
+          </div>
+        </div>
+
+        <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-white/80">
+          <li class="flex items-start gap-2"><span class="mt-1 size-2 rounded-full bg-emerald-400"></span> Managed
+            hosting & SSL</li>
+          <li class="flex items-start gap-2"><span class="mt-1 size-2 rounded-full bg-emerald-400"></span> Software &
+            plugin updates</li>
+          <li class="flex items-start gap-2"><span class="mt-1 size-2 rounded-full bg-emerald-400"></span> Daily backups
+            & restore support</li>
+          <li class="flex items-start gap-2"><span class="mt-1 size-2 rounded-full bg-emerald-400"></span> Security
+            monitoring & uptime checks</li>
+          <li class="flex items-start gap-2"><span class="mt-1 size-2 rounded-full bg-emerald-400"></span> Performance
+            tuning & image optimization</li>
+          <li class="flex items-start gap-2"><span class="mt-1 size-2 rounded-full bg-emerald-400"></span> Priority
+            support via email</li>
+        </ul>
+
+        <p class="mt-6 text-xs text-white/50">
+          Notes: custom servers, premium plugins, or major feature work billed separately. Cancel anytime; we’ll provide
+          a site export on request.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="relative py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-extrabold tracking-tight">Portfolio</h2>
+        <p class="mt-2 text-white/70">BastionTech is a website design company in Oviedo serving nearby areas like Winter
+          Springs and the greater Central
+          Florida region. Check out some of our recent projects!
+        </p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- QualityComesFirstFlooring -->
+        <a href="https://qualitycomesfirstflooring.com" target="_blank" rel="noopener"
+          aria-label="Premium Hardwood & Luxury Vinyl Flooring in Central Florida"
+          class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-[16/10] bg-gradient-to-tr from-white/10 to-transparent">
+            <img src="img/qualitycomesfirst.webp"
+              alt="Local business website and SEO strategy for Quality Comes First Flooring in Central Florida, designed by BastionTech"
+              class="w-full h-full object-cover object-center mix-blend-normal" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Quality Comes First Flooring</h3>
+            <p class="mt-1 text-sm text-white/70">Website & Local SEO</p>
+          </div>
+        </a>
+        <!-- SendMeStars -->
+        <a href="https://sendmestars.com" target="_blank" rel="noopener"
+          aria-label="Send Me Stars - Custom Google Review Links for Local Businesses"
+          class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-[16/10] bg-gradient-to-tr from-white/10 to-transparent">
+            <img src="img/sendmestarsbanner.webp"
+              alt="Custom landing page for SendMeStars, a free Google review link generator developed by BastionTech"
+              class="w-full h-full object-cover object-center mix-blend-normal" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Send Me Stars</h3>
+            <p class="mt-1 text-sm text-white/70">Custom Google Review Links for Local Businesses</p>
+          </div>
+        </a>
+
+        <!-- AskFaithBot -->
+        <a href="https://askfaithbot.com" target="_blank" rel="noopener"
+          aria-label="AskFaithBot — Christian AI Assistant"
+          class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-[16/10] bg-gradient-to-tr from-white/10 to-transparent">
+            <img src="img/AskFaithBot.webp"
+              alt="Website and AI chatbot interface for AskFaithBot, a Christian educational assistant developed by BastionTech"
+              class="w-full h-full object-cover object-center mix-blend-normal" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">AskFaithBot</h3>
+            <p class="mt-1 text-sm text-white/70">Christian AI Assistant</p>
+          </div>
+        </a>
+
+        <!-- Bastion Web Blocker -->
+        <a href="https://chromewebstore.google.com/detail/bastion-web-blocker/dobgcefbomojojllhkmjpanicpfmmcdo"
+          target="_blank" rel="noopener" aria-label="Bastion Web Blocker — Family Chrome Extension"
+          class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-[16/10] bg-gradient-to-tr from-white/10 to-transparent">
+            <img src="img/webblock.webp"
+              alt="Landing page design and branding for Bastion Web Blocker, a family-safe internet filter created by BastionTech"
+              class="w-full h-full object-cover object-center" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Bastion Web Blocker</h3>
+            <p class="mt-1 text-sm text-white/70">Family Chrome Extension</p>
+          </div>
+        </a>
+
+        <!-- Not Content Coaching -->
+        <a href="https://notcontentcoaching.com" target="_blank" rel="noopener"
+          aria-label="Not Content Coaching — Website Design & Branding"
+          class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-[16/10] bg-gradient-to-tr from-white/10 to-transparent">
+            <img src="img/NotContentLogo.webp"
+              alt="Life coaching website and brand design for Not Content Coaching, a personal growth company built by BastionTech"
+              class="w-full h-full object-cover object-center" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Not Content Coaching</h3>
+            <p class="mt-1 text-sm text-white/70">Website Design & Branding</p>
+          </div>
+        </a>
+
+        <!-- Bastion X-Ray -->
+        <a href="https://github.com/noeljbass/BastionXRay" target="_blank" rel="noopener"
+          aria-label="Bastion X-Ray — Article Paywall Bypass"
+          class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-[16/10] bg-gradient-to-tr from-white/10 to-transparent">
+            <img src="img/bastionxray.webp"
+              alt="Bastion X-Ray — BastionTech tool for accessing articles behind restrictive paywalls with a streamlined reading interface"
+              class="w-full h-full object-cover object-center" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Bastion X-Ray</h3>
+            <p class="mt-1 text-sm text-white/70">Article Paywall Bypass</p>
+          </div>
+        </a>
+
+        <!-- Bass Games -->
+        <a href="https://bassgames.net" target="_blank" rel="noopener"
+          aria-label="Bass Games — Website Design, Branding, & Online Store"
+          class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-[16/10] bg-gradient-to-tr from-white/10 to-transparent">
+            <img src="img/BassGames.webp"
+              alt="E-commerce website for BassGames digital escape rooms, built with SEO-friendly design by BastionTech"
+              class="w-full h-full object-cover object-center" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Bass Games</h3>
+            <p class="mt-1 text-sm text-white/70">Website Design, Branding, & Online Store</p>
+          </div>
+        </a>
+
+        <!-- Shiny Blue Pools -->
+        <a href="https://shinybluepool.com" target="_blank" rel="noopener"
+          aria-label="Shiny Blue Pools — Website Design & Marketing"
+          class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-[16/10] bg-gradient-to-tr from-white/10 to-transparent">
+            <img src="img/sbp2.webp"
+              alt="Website and local SEO for Shiny Blue Pool, a Central Florida pool service by BastionTech."
+              class="w-full h-full object-cover object-center" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Shiny Blue Pools</h3>
+            <p class="mt-1 text-sm text-white/70">Website Design & Marketing</p>
+          </div>
+        </a>
+
+        <!-- Taino Athlete -->
+        <a href="https://tainoathlete.com" target="_blank" rel="noopener"
+          aria-label="Taino Athlete — Website Design & Lead Magnet"
+          class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-[16/10] bg-gradient-to-tr from-white/10 to-transparent">
+            <img src="img/tainoicon.webp"
+              alt="Brand identity and performance training website for Taino Athlete, developed by BastionTech"
+              class="w-full h-full object-cover object-center" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Taino Athlete</h3>
+            <p class="mt-1 text-sm text-white/70">Website Design & Lead Magnet</p>
+          </div>
+        </a>
+
+        <!-- Gulf Coast Family Camp -->
+        <a href="https://gulfcoastfamilycamp.com" target="_blank" rel="noopener"
+          aria-label="Gulf Coast Family Camp — Website Design, Logo Design, Payment Integration"
+          class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-[16/10] bg-gradient-to-tr from-white/10 to-transparent">
+            <img src="img/gcfc.webp"
+              alt="Event registration website and design system for Gulf Coast Family Camp, developed by BastionTech"
+              class="w-full h-full object-cover object-center" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Gulf Coast Family Camp</h3>
+            <p class="mt-1 text-sm text-white/70">Website Design, SEO, Payment & Admin Integration</p>
+          </div>
+        </a>
+
+        <!-- Ferguson Family Danes -->
+        <a href="https://fergusonfamilydanes.com" target="_blank" rel="noopener"
+          aria-label="Ferguson Family Danes — Website Design & Payment Processing"
+          class="reveal group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-[16/10] bg-gradient-to-tr from-white/10 to-transparent">
+            <img src="img/ferg2.webp"
+              alt="Breeder website design and branding for Ferguson Family Danes, created by BastionTech"
+              class="w-full h-full object-cover object-center" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Ferguson Family Danes</h3>
+            <p class="mt-1 text-sm text-white/70">Website Design & Payment Processing</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== How It Works ===================== -->
+  <section id="how-it-works" class="relative py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-extrabold tracking-tight">How to Start a Website with BastionTech</h2>
+        <p class="mt-2 text-white/70">Simple, transparent steps—from hello to launch.</p>
+      </div>
+
+      <ol class="mt-10 grid gap-6 md:grid-cols-2">
+        <!-- 1 -->
+        <li class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+          <div class="text-sand text-sm font-semibold">Step 1</div>
+          <h3 class="mt-1 font-semibold">Contact & Goals</h3>
+          <p class="mt-2 text-sm text-white/80">Tell us about your business, audience, and objectives using the form
+            below.</p>
+        </li>
+        <!-- 2 -->
+        <li class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+          <div class="text-sand text-sm font-semibold">Step 2</div>
+          <h3 class="mt-1 font-semibold">Discovery Call (20–30 min)</h3>
+          <p class="mt-2 text-sm text-white/80">We confirm scope, timeline, and success metrics for your Oviedo/Central
+            FL market.</p>
+        </li>
+        <!-- 3 -->
+        <li class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+          <div class="text-sand text-sm font-semibold">Step 3</div>
+          <h3 class="mt-1 font-semibold">Clear Proposal & Deposit</h3>
+          <p class="mt-2 text-sm text-white/80">Choose Essential ($300), Professional ($450), or Custom ($600+).
+            We schedule your build.</p>
+        </li>
+        <!-- 4 -->
+        <li class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+          <div class="text-sand text-sm font-semibold">Step 4</div>
+          <h3 class="mt-1 font-semibold">Design & Build (2–4 weeks)</h3>
+          <p class="mt-2 text-sm text-white/80">We create a fast, mobile-ready site with on-page SEO and your brand
+            content.</p>
+        </li>
+        <!-- 5 -->
+        <li class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+          <div class="text-sand text-sm font-semibold">Step 5</div>
+          <h3 class="mt-1 font-semibold">Launch & QA</h3>
+          <p class="mt-2 text-sm text-white/80">We handle DNS/SSL, submit your sitemap, and verify Google indexing.</p>
+        </li>
+        <!-- 6 -->
+        <li class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+          <div class="text-sand text-sm font-semibold">Step 6</div>
+          <h3 class="mt-1 font-semibold">Site Care & SEO (Optional)</h3>
+          <p class="mt-2 text-sm text-white/80">Keep it humming with Site Care ($100/mo) or grow with Basic ($1500/mo)
+            or
+            Advanced SEO ($3,000/mo).</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq" class="relative py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-extrabold tracking-tight">Frequently Asked Questions</h2>
+        <p class="mt-2 text-white/70">Straight answers about our web design and local SEO services in Oviedo, FL.</p>
+      </div>
+
+      <div class="mt-10 space-y-4">
+        <!-- 1 -->
+        <details class="reveal group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <h3 class="font-semibold">What kinds of businesses do you serve?</h3>
+            <span
+              class="ml-4 shrink-0 rounded-lg border border-white/10 px-2 py-1 text-xs text-white/60 group-open:bg-white/10">Open</span>
+          </summary>
+          <div class="mt-3 text-white/80 text-sm">
+            We primarily help Christian and family-owned service businesses in Oviedo and Central Florida—such as
+            chiropractors, coaches, home services, ministries, and camps—but we’re happy to discuss any ethical small
+            business.
+          </div>
+        </details>
+
+        <!-- 2 -->
+        <details class="reveal group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <h3 class="font-semibold">How much does a website cost?</h3>
+            <span
+              class="ml-4 shrink-0 rounded-lg border border-white/10 px-2 py-1 text-xs text-white/60 group-open:bg-white/10">Open</span>
+          </summary>
+          <div class="mt-3 text-white/80 text-sm">
+            We offer three builds: <strong>Essential</strong> ($300), <strong>Professional</strong> ($450), and
+            <strong>Custom</strong> ($600+ based on scope). Each includes performance optimization and launch support.
+          </div>
+        </details>
+
+        <!-- 3 -->
+        <details class="reveal group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <h3 class="font-semibold">How long does a typical project take?</h3>
+            <span
+              class="ml-4 shrink-0 rounded-lg border border-white/10 px-2 py-1 text-xs text-white/60 group-open:bg-white/10">Open</span>
+          </summary>
+          <div class="mt-3 text-white/80 text-sm">
+            Our average turnaround is <strong>2–4 weeks</strong> once content and branding are ready. Complex features
+            or custom integrations may add time, but we’ll give you a clear schedule up front.
+          </div>
+        </details>
+
+        <!-- 4 -->
+        <details class="reveal group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <h3 class="font-semibold">Do you handle hosting and maintenance?</h3>
+            <span
+              class="ml-4 shrink-0 rounded-lg border border-white/10 px-2 py-1 text-xs text-white/60 group-open:bg-white/10">Open</span>
+          </summary>
+          <div class="mt-3 text-white/80 text-sm">
+            Yes—our <strong>Site Care</strong> plan is <strong>$100/mo</strong> and includes managed hosting with SSL,
+            updates, backups, performance tuning, and security monitoring.
+          </div>
+        </details>
+
+        <!-- 5 -->
+        <details class="reveal group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <h3 class="font-semibold">What’s included in your SEO plans?</h3>
+            <span
+              class="ml-4 shrink-0 rounded-lg border border-white/10 px-2 py-1 text-xs text-white/60 group-open:bg-white/10">Open</span>
+          </summary>
+          <div class="mt-3 text-white/80 text-sm">
+            <strong>Basic SEO ($1500/mo)</strong> covers site audit, on-page optimization, sitemap work, and 1 new
+            content piece monthly.
+            <strong>Advanced SEO ($3,000/mo)</strong> adds Google Business Profile optimization with weekly posts, local
+            citations, review generation, and 2 content pieces monthly.
+          </div>
+        </details>
+
+        <!-- 6 -->
+        <details class="reveal group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <h3 class="font-semibold">Can you improve my Google Maps (Local Pack) rankings?</h3>
+            <span
+              class="ml-4 shrink-0 rounded-lg border border-white/10 px-2 py-1 text-xs text-white/60 group-open:bg-white/10">Open</span>
+          </summary>
+          <div class="mt-3 text-white/80 text-sm">
+            We focus on the signals that move Maps: complete Google Business Profile, consistent NAP citations,
+            proximity-relevant content, local backlinks, and steady reviews. No one can guarantee rankings, but we
+            target the proven levers that increase calls and visibility in Oviedo and nearby cities.
+          </div>
+        </details>
+
+        <!-- 7 -->
+        <details class="reveal group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <h3 class="font-semibold">Will my site be fast and mobile-friendly?</h3>
+            <span
+              class="ml-4 shrink-0 rounded-lg border border-white/10 px-2 py-1 text-xs text-white/60 group-open:bg-white/10">Open</span>
+          </summary>
+          <div class="mt-3 text-white/80 text-sm">
+            Yes—every build is responsive and tuned for Core Web Vitals (image optimization, efficient scripts,
+            caching). Speed and usability are standard.
+          </div>
+        </details>
+
+        <!-- 8 -->
+        <details class="reveal group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <h3 class="font-semibold">Do you offer e-commerce or custom tools?</h3>
+            <span
+              class="ml-4 shrink-0 rounded-lg border border-white/10 px-2 py-1 text-xs text-white/60 group-open:bg-white/10">Open</span>
+          </summary>
+          <div class="mt-3 text-white/80 text-sm">
+            Absolutely. Our Custom tier handles stores, payment portals, portals/dashboards, admin tooling, and unique
+            integrations tailored to your workflow.
+          </div>
+        </details>
+
+        <!-- 9 -->
+        <details class="reveal group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <h3 class="font-semibold">How soon will I hear back after contacting you?</h3>
+            <span
+              class="ml-4 shrink-0 rounded-lg border border-white/10 px-2 py-1 text-xs text-white/60 group-open:bg-white/10">Open</span>
+          </summary>
+          <div class="mt-3 text-white/80 text-sm">
+            We reply within <strong>one business day</strong> with next steps and an ideal plan for your goals and
+            budget.
+          </div>
+        </details>
+
+        <!-- 10 -->
+        <details class="reveal group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <h3 class="font-semibold">Do you work outside Oviedo?</h3>
+            <span
+              class="ml-4 shrink-0 rounded-lg border border-white/10 px-2 py-1 text-xs text-white/60 group-open:bg-white/10">Open</span>
+          </summary>
+          <div class="mt-3 text-white/80 text-sm">
+            Yes—Seminole County and the broader Central Florida area are our typical service zones, and we can also
+            serve clients remotely.
+          </div>
+        </details>
+        <!--11-->
+        <details class="reveal group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <h3 class="font-semibold">How does your 2× ROI Guarantee work?</h3>
+            <span
+              class="ml-4 shrink-0 rounded-lg border border-white/10 px-2 py-1 text-xs text-white/60 group-open:bg-white/10">Open</span>
+          </summary>
+          <div class="mt-3 text-white/80 text-sm">
+            We measure SEO results over a <strong>rolling 90-day period</strong> using call tracking, form sources, and
+            booking
+            tags for Organic/GBP.
+            If your <strong>verified SEO revenue</strong> is less than <strong>2×</strong> your fee, I’ll <strong>reduce
+              my fee
+              to 50% of that verified revenue</strong>
+            until we’re back at 2× or better. Clear, trackable, and fair.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What kinds of businesses do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We primarily help Christian and family-owned service businesses in Oviedo and Central Florida—such as chiropractors, coaches, home services, ministries, and camps—but we’re happy to discuss any ethical small business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a website cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer three builds: Essential ($300), Professional ($450), and Custom ($600+ based on scope). Each includes performance optimization and launch support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical project take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our average turnaround is 2–4 weeks once content and branding are ready. Complex features or custom integrations may add time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle hosting and maintenance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—our Site Care plan is $100/mo and includes managed hosting with SSL, updates, backups, performance tuning, and security monitoring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What’s included in your SEO plans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Basic SEO ($1500/mo) covers site audit, on-page optimization, sitemap work, and one new content piece monthly. Advanced SEO ($3,000/mo) adds Google Business Profile optimization with weekly posts, local citations, review generation, and two content pieces each month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you improve my Google Maps (Local Pack) rankings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We focus on the signals that move Maps: complete Google Business Profile, consistent citations, proximity-relevant content, local backlinks, and steady reviews. No one can guarantee rankings, but we target the proven levers that increase calls and visibility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my site be fast and mobile-friendly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—every build is responsive and tuned for Core Web Vitals with image optimization, efficient scripts, and caching."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer e-commerce or custom tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Our Custom tier handles stores, payment portals, dashboards, admin tooling, and unique integrations tailored to your workflow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How soon will I hear back after contacting you?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We reply within one business day with next steps and an ideal plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work outside Oviedo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—Seminole County and Central Florida are our typical service zones, and we can also serve clients remotely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does your 2× ROI Guarantee work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We measure SEO results over a rolling 90-day period using call tracking, form sources, and booking tags for Organic/GBP. If verified SEO revenue is less than 2× your fee, I reduce my fee to 50% of that verified revenue until we’re back at 2× or better."
+      }
+    }
+  ]
+}
+</script>
+
+  <!-- Contact / Lead form (static) -->
+  <section id="contact" class="relative py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div class="reveal">
+          <h2 class="text-3xl font-extrabold tracking-tight">Tell us about your project</h2>
+          <p class="mt-2 text-white/70 max-w-xl">We’ll reply within one business day with next steps and an ideal plan.
+          </p>
+          <div class="mt-8 space-y-4 text-sm text-white/70">
+            <div class="flex items-center gap-3"><span class="size-2 rounded-full bg-emerald-400"></span> Average
+              turnaround: 2-4 weeks</div>
+            <div class="flex items-center gap-3"><span class="size-2 rounded-full bg-emerald-400"></span> Transparent,
+              fixed pricing</div>
+            <div class="flex items-center gap-3"><span class="size-2 rounded-full bg-emerald-400"></span> Worry-free
+              site management</div>
+          </div>
+        </div>
+        <form action="mail.php" method="POST"
+          class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur space-y-4">
+
+          <div>
+            <label class="block text-sm text-white/70" for="name">Name</label>
+            <input id="name" name="name" type="text" required
+              class="mt-1 w-full rounded-xl bg-white/10 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-white/70" for="email">Email</label>
+            <input id="email" name="email" type="email" required
+              class="mt-1 w-full rounded-xl bg-white/10 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-white/70" for="budget">What Service are you interested in?</label>
+            <select id="budget" name="budget"
+              class="mt-1 w-full rounded-xl bg-white text-ink border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50">
+              <option value="Web Design">Web Design</option>
+              <option value="SEO Services">SEO Services</option>
+              <option value="Backlink Requests">Backlink Requests</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm text-white/70" for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required
+              class="mt-1 w-full rounded-xl bg-white/10 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50"
+              placeholder="Tell us about your goals."></textarea>
+          </div>
+
+          <!-- How did you find out -->
+          <div>
+            <label class="block text-sm text-white/70" for="found_us">How did you find out about us?</label>
+            <select id="found_us" name="found_us"
+              class="mt-1 w-full rounded-xl bg-white text-ink border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50">
+              <option value="">Select an option</option>
+              <option value="Google">Google / Search</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Referral">Referral</option>
+              <option value="Family/Friend">Family/Friend</option>
+              <option value="Yelp">Yelp</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- Referrer name (hidden until Referral or Family/Friend is chosen) -->
+          <div id="referrer-row" class="hidden">
+            <label class="block text-sm text-white/70" for="referrer_name">Who referred you?</label>
+            <input id="referrer_name" name="referrer_name" type="text"
+              class="mt-1 w-full rounded-xl bg-white/10 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50"
+              placeholder="Name of person or company who referred you" />
+          </div>
+
+          <!-- Honeypot (spam trap—keep it hidden/off-screen) -->
+          <div aria-hidden="true" style="position:absolute; left:-5000px;">
+            <input type="text" name="honeypot" id="honeypot" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <!-- CAPTCHA (visible input + hidden correct answer required by mail.php) -->
+          <div>
+            <label for="captcha" class="block text-sm text-white/70 mb-2">Please enter the text shown below</label>
+
+            <div class="flex items-center gap-3">
+              <!-- The server should render a src here or your captcha endpoint should provide it -->
+              <img id="captcha-image" src="/captcha.php?img=1" alt="Captcha Image"
+                class="border border-white/10 rounded-xl bg-white/5 p-2 h-14" />
+
+              <div class="flex flex-col gap-2">
+                <input id="captcha" name="captcha" type="text" required
+                  class="w-48 rounded-xl bg-white/10 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  placeholder="Type the text" autocomplete="off" />
+
+                <div>
+                  <button type="button" id="refresh-captcha"
+                    class="rounded-xl border border-white/10 px-3 py-2 hover:border-white/20 text-xs">Refresh</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- IMPORTANT: mail.php checks this hidden field -->
+            <input type="hidden" id="captcha-answer" name="captcha-answer" value="" />
+          </div>
+
+          <div class="pt-4">
+            <button type="submit"
+              class="inline-flex justify-center rounded-xl bg-primary px-4 py-2 font-semibold hover:bg-primary/90">Send
+              Message</button>
+          </div>
+        </form>
+
+        <!-- CAPTCHA Script -->
+        <script>
+          const captchaData = [
+            { image: 'captcha/1.png', answer: 'MKAB' },
+            { image: 'captcha/2.png', answer: 'XRSP' },
+            { image: 'captcha/3.png', answer: 'RYEW' },
+            { image: 'captcha/4.png', answer: 'DWVM' },
+            { image: 'captcha/5.png', answer: 'KL5P' },
+            { image: 'captcha/6.png', answer: 'S38J' },
+            { image: 'captcha/7.png', answer: 'C6F1' },
+            { image: 'captcha/8.png', answer: 'K8B2' },
+            { image: 'captcha/9.png', answer: '3R6U' },
+            { image: 'captcha/10.png', answer: 'A4T9' }
+          ];
+
+          function generateCaptcha() {
+            const randomIndex = Math.floor(Math.random() * captchaData.length);
+            const selectedCaptcha = captchaData[randomIndex];
+            document.getElementById('captcha-image').src = selectedCaptcha.image;
+            document.getElementById('captcha-answer').value = selectedCaptcha.answer;
+          }
+
+          window.addEventListener('load', generateCaptcha);
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section id="about" class="relative pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-xl font-extrabold tracking-tight">About BastionTech</h2>
+        <p class="mt-2 text-white/70 max-w-3xl">
+          BastionTech is a Christian web design and SEO studio based in Oviedo, FL. We build fast, conversion-focused
+          websites and manage ethical, measurable local SEO for family-owned service brands and ministries across
+          Central
+          Florida.
+        </p>
+      </div>
+    </div>
+  </section> -->
+
+
+  <footer class="border-t border-white/5 pt-12 pb-8 text-sm text-white/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- 3 columns -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Brand / blurb -->
+        <div>
+          <a href="/" class="inline-flex items-center gap-2">
+            <img src="/img/BastionLogo.png" alt="BastionTech" class="h-9 w-auto">
+            <span class="sr-only">BastionTech</span>
+          </a>
+          <p class="mt-3 text-white/60 max-w-xs">
+            BastionTech is a Christian web design & local SEO studio in Oviedo, FL. We build fast,
+            conversion-focused websites and grow visibility with Google Business Profile optimization.
+          </p>
+        </div>
+
+        <!-- Helpful links -->
+        <nav aria-label="Helpful links">
+          <h3 class="text-white/90 font-semibold">Helpful Links</h3>
+          <ul class="mt-3 space-y-2">
+            <li><a class="hover:text-white" href="/#packages-web">Web Design Packages</a></li>
+            <li><a class="hover:text-white" href="/seo.html">Local SEO Services (Oviedo)</a></li>
+            <li><a class="hover:text-white" href="/#site-care">Site Care & Hosting</a></li>
+            <li><a class="hover:text-white" href="/#portfolio">Portfolio</a></li>
+            <li><a class="hover:text-white" href="/blog/blog.html">Blog</a></li>
+            <li><a class="hover:text-white" href="/#faq">FAQ</a></li>
+            <li><a class="hover:text-white" href="/#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- NAP -->
+        <div>
+          <h3 class="text-white/90 font-semibold">Contact</h3>
+          <address class="not-italic mt-3 space-y-2">
+            <div class="text-white/90 font-medium">BastionTech</div>
+            <div>Oviedo, FL 32765</div>
+            <div>
+              <a href="tel:+14077962684" class="hover:text-white font-semibold">📞 (407) 796-2684</a>
+            </div>
+            <div>
+              <a href="mailto:mail@bastiontech.org" class="hover:text-white">mail@bastiontech.org</a>
+            </div>
+            <div class="text-white/60">Mon–Sun · 9:00 AM–5:00 PM</div>
+          </address>
+
+          <div class="mt-4 flex items-center gap-4">
+            <a href="https://www.facebook.com/bastiontechservices/" target="_blank" rel="noopener"
+              class="hover:text-white">Facebook</a>
+            <a href="https://www.linkedin.com/company/bastion-technology-solutions/" target="_blank" rel="noopener"
+              class="hover:text-white">LinkedIn</a>
+          </div>
+
+          <div class="mt-4 flex items-center gap-4">
+            <a href="/bastionprivacy.html" class="hover:text-white">Privacy</a>
+            <a href="/termsandconditions.html" class="hover:text-white">Terms</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="mt-10 border-t border-white/5 pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-white/60">
+        <p>© <span id="y"></span> BastionTech. All rights reserved.</p>
+        <p>Serving Oviedo, Winter Springs, and Central Florida.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/mc-validate.js"></script>
+  <script>
+    // Parallax & reveal
+    const layers = document.querySelectorAll('.parallax-layer');
+    const reveals = document.querySelectorAll('.reveal');
+
+    const onScroll = () => {
+      const s = window.scrollY;
+      document.documentElement.style.setProperty('--scroll', s + 'px');
+      layers.forEach(el => {
+        const speed = parseFloat(el.dataset.speed || 0);
+        el.style.transform = `translate3d(0, ${s * speed}px, 0)`;
+      });
+      // section reveal
+      reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 60) el.classList.add('show');
+      });
+    };
+    document.addEventListener('scroll', () => requestAnimationFrame(onScroll), { passive: true });
+    window.addEventListener('load', () => { onScroll(); document.getElementById('y').textContent = new Date().getFullYear(); });
+
+    (function ($) {
+      window.fnames = []; window.ftypes = [];
+      fnames[0] = 'EMAIL'; ftypes[0] = 'email';
+      fnames[1] = 'FNAME'; ftypes[1] = 'text';
+      fnames[2] = 'LNAME'; ftypes[2] = 'text';
+      fnames[3] = 'ADDRESS'; ftypes[3] = 'address';
+      fnames[4] = 'PHONE'; ftypes[4] = 'phone';
+      fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday';
+      fnames[6] = 'MMERGE6'; ftypes[6] = 'url';
+    })(jQuery); var $mcj = jQuery.noConflict(true);
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to start a website project with BastionTech",
+  "description": "Step-by-step process BastionTech uses to plan, design, launch, and grow a website for Oviedo and Central Florida small businesses.",
+  "image": "https://bastiontech.org/bastionbanner.png",
+  "totalTime": "P21D",
+  "supply": [
+    {"@type":"HowToSupply","name":"Logo and brand assets (if available)"},
+    {"@type":"HowToSupply","name":"Page copy or bullet points"},
+    {"@type":"HowToSupply","name":"Photos or product/service details"}
+  ],
+  "tool": [
+    {"@type":"HowToTool","name":"Email or Zoom for communication"},
+    {"@type":"HowToTool","name":"Domain/DNS access for launch"}
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Contact & goals",
+      "text": "Use the contact form to share your business goals, audience, and preferred timeline.",
+      "url": "https://bastiontech.org/#contact"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Discovery call",
+      "text": "A 20–30 minute call to align on scope, success metrics, and content needs for Oviedo/Central Florida.",
+      "url": "https://bastiontech.org/#contact",
+      "estimatedTime": "PT30M"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Proposal & deposit",
+      "text": "Choose Essential ($300), Professional ($450), or Custom ($600+) and secure your build slot.",
+      "url": "https://bastiontech.org/#packages-web"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Design & build",
+      "text": "We design and develop a fast, mobile-friendly site with on-page SEO and analytics.",
+      "estimatedTime": "P14D",
+      "url": "https://bastiontech.org/#packages-web"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Launch & QA",
+      "text": "We configure DNS/SSL, submit your XML sitemap, and verify indexing in Google Search Console.",
+      "url": "https://bastiontech.org/#site-care"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Site Care & SEO",
+      "text": "Optional care ($100/mo) and ongoing SEO—Basic ($1500/mo) or Advanced ($3,000/mo)—to grow rankings and leads.",
+      "url": "https://bastiontech.org/#packages-seo"
+    }
+  ]
+}
+</script>
+
+  <script>
+    (function () {
+      // ===== Mobile hamburger toggle =====
+      const btn = document.getElementById('menuBtn');
+      const panel = document.getElementById('mobileMenu');
+      const iconOpen = document.getElementById('iconOpen');
+      const iconClose = document.getElementById('iconClose');
+
+      function closeMenu() {
+        if (!panel) return;
+        panel.classList.add('hidden');
+        if (iconOpen) iconOpen.classList.remove('hidden');
+        if (iconClose) iconClose.classList.add('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
+      function openMenu() {
+        if (!panel) return;
+        panel.classList.remove('hidden');
+        if (iconOpen) iconOpen.classList.add('hidden');
+        if (iconClose) iconClose.classList.remove('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      }
+
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+          isOpen ? closeMenu() : openMenu();
+        });
+      }
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+      if (panel) {
+        panel.addEventListener('click', (e) => { if (e.target.tagName === 'A') closeMenu(); });
+      }
+
+      // ===== Mobile disclosures (submenu inside hamburger) =====
+      document.querySelectorAll('[data-disclosure]').forEach(dBtn => {
+        dBtn.addEventListener('click', () => {
+          const key = dBtn.getAttribute('data-disclosure');
+          const dPanel = document.querySelector(`[data-disclosure-panel="${key}"]`);
+          const expanded = dBtn.getAttribute('aria-expanded') === 'true';
+          dBtn.setAttribute('aria-expanded', String(!expanded));
+          if (dPanel) dPanel.classList.toggle('hidden', expanded);
+          const icon = dBtn.querySelector('svg');
+          if (icon) icon.style.transform = expanded ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+      });
+
+      // ===== Desktop dropdowns (click-to-open) =====
+      const btnSel = '[data-dropdown-btn]';
+      const panelSel = '[data-dropdown-panel]';
+      const buttons = Array.from(document.querySelectorAll(btnSel));
+      const panels = Array.from(document.querySelectorAll(panelSel));
+
+      function closeAllDropdowns() {
+        buttons.forEach(b => b.setAttribute('aria-expanded', 'false'));
+        panels.forEach(p => {
+          p.classList.add('hidden', 'opacity-0', 'translate-y-1');
+          p.classList.remove('opacity-100', 'translate-y-0');
+        });
+      }
+
+      function openDropdown(key) {
+        const btn = document.querySelector(`[data-dropdown-btn="${key}"]`);
+        const panel = document.querySelector(`[data-dropdown-panel="${key}"]`);
+        if (!btn || !panel) return;
+
+        btn.setAttribute('aria-expanded', 'true');
+        panel.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          panel.classList.remove('opacity-0', 'translate-y-1');
+          panel.classList.add('opacity-100', 'translate-y-0');
+        });
+
+        const firstFocusable = panel.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+        if (firstFocusable) firstFocusable.focus({ preventScroll: true });
+      }
+
+      buttons.forEach(b => {
+        b.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const key = b.getAttribute('data-dropdown-btn');
+          const expanded = b.getAttribute('aria-expanded') === 'true';
+          closeAllDropdowns();
+          if (!expanded) openDropdown(key);
+        });
+      });
+
+      // Close on outside click / ESC / link click
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest(panelSel) && !e.target.closest(btnSel)) closeAllDropdowns();
+      });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAllDropdowns(); });
+      panels.forEach(p => p.addEventListener('click', (e) => { if (e.target.tagName === 'A') closeAllDropdowns(); }));
+    })();
+  </script>
+  <script>
+    (function () {
+      // Utility: set the budget select to the option whose visible text matches the guessed service.
+      function setServiceSelectByName(serviceText) {
+        const select = document.getElementById('budget');
+        if (!select) return;
+        const opt = Array.from(select.options).find(o => o.text.toLowerCase().includes(serviceText.toLowerCase()));
+        if (opt) select.value = opt.value;
+      }
+
+      // 1) Attach click handlers to any anchor that links to #contact
+      document.querySelectorAll('a[href="#contact"]').forEach(a => {
+        a.addEventListener('click', function (e) {
+          // find nearest section ancestor to decide which package set this link belongs to
+          const section = a.closest('section');
+          if (!section) return;
+          const id = (section.id || '').toLowerCase();
+
+          if (id.includes('packages-web') || id.includes('packages-web') || id.includes('web')) {
+            setServiceSelectByName('Web Design');
+          } else if (id.includes('packages-seo') || id.includes('seo')) {
+            setServiceSelectByName('SEO Services');
+          } else {
+            // fallback: if the link text includes SEO or Web, try that
+            const txt = (a.textContent || '').toLowerCase();
+            if (txt.includes('seo')) setServiceSelectByName('SEO Services');
+            if (txt.includes('web') || txt.includes('build')) setServiceSelectByName('Web Design');
+          }
+          // allow normal behavior (scroll)
+        });
+      });
+
+      // 2) Toggle referral name input when found_us changes
+      const foundSelect = document.getElementById('found_us');
+      const refRow = document.getElementById('referrer-row');
+      const refInput = document.getElementById('referrer_name');
+
+      function toggleReferrer() {
+        if (!foundSelect || !refRow || !refInput) return;
+        if (foundSelect.value === 'Referral' || foundSelect.value === 'Family/Friend') {
+          refRow.classList.remove('hidden');
+          refInput.required = true;
+        } else {
+          refRow.classList.add('hidden');
+          refInput.required = false;
+          refInput.value = '';
+        }
+      }
+
+      if (foundSelect) {
+        foundSelect.addEventListener('change', toggleReferrer);
+        // initialize on load
+        toggleReferrer();
+      }
+
+      // 3) If the user lands on #contact via anchor and the click happened earlier, attempt to read hash and set select.
+      function maybeSetFromHash() {
+        // Example patterns could be '#contact', '#contact?service=web' etc.
+        if (location.hash && location.hash.toLowerCase().includes('contact')) {
+          // try to read a query-like part after hash: '#contact?service=seo'
+          const parts = location.hash.split('?');
+          if (parts.length > 1) {
+            const params = new URLSearchParams(parts[1]);
+            const s = params.get('service');
+            if (s) setServiceSelectByName(s);
+          }
+        }
+      }
+
+      // run on DOM ready
+      document.addEventListener('DOMContentLoaded', maybeSetFromHash);
+      // also run immediately in case DOMContentLoaded already fired
+      maybeSetFromHash();
+
+    })();
+  </script>
+
+
+</body>
+
+</html>
